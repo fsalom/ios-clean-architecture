@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class HomeBuilder: BuilderProtocol {
-    func build() -> BaseViewController {
+final class HomeBuilder: HomeBuilderProtocol {
+    func build() -> HomeViewController {
         let viewController = HomeViewController()
         let router = HomeRouter(viewController: viewController)
         let repository = HomeRepository()

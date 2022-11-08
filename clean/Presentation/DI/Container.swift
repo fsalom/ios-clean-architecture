@@ -13,7 +13,10 @@ final class Container {
 }
 
 extension Container {
-    func willEnterForeground() {
-        Container.shared.window?.rootViewController = HomeBuilder().build()
+    func home() {
+        DispatchQueue.main.async {
+            self.window?.rootViewController = HomeBuilder().build()
+            self.window?.makeKeyAndVisible()
+        }
     }
 }

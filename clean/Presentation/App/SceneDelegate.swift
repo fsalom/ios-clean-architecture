@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         Container.shared.window = window
+        Container.shared.home()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
