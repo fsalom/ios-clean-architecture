@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HomeRespositoryError: Error{
+enum HomeRepositoryError: Error{
     case infoNotFound
 }
 

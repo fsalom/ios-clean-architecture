@@ -14,7 +14,7 @@
 		C15BA60F291AAD8700E0CF95 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA609291AAD8700E0CF95 /* ListRouter.swift */; };
 		C15BA610291AAD8700E0CF95 /* ListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA60A291AAD8700E0CF95 /* ListBuilder.swift */; };
 		C15BA611291AAD8700E0CF95 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA60B291AAD8700E0CF95 /* ListProtocols.swift */; };
-		C15BA613291AAE4D00E0CF95 /* ListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA612291AAE4D00E0CF95 /* ListRepository.swift */; };
+		C15BA613291AAE4D00E0CF95 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA612291AAE4D00E0CF95 /* CharacterRepository.swift */; };
 		C15BA615291AAE7600E0CF95 /* ListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA614291AAE7600E0CF95 /* ListUseCase.swift */; };
 		C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178031C291673D800E9E0AE /* AppDelegate.swift */; };
 		C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178031E291673D800E9E0AE /* SceneDelegate.swift */; };
@@ -43,7 +43,7 @@
 		C15BA609291AAD8700E0CF95 /* ListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		C15BA60A291AAD8700E0CF95 /* ListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBuilder.swift; sourceTree = "<group>"; };
 		C15BA60B291AAD8700E0CF95 /* ListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
-		C15BA612291AAE4D00E0CF95 /* ListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepository.swift; sourceTree = "<group>"; };
+		C15BA612291AAE4D00E0CF95 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
 		C15BA614291AAE7600E0CF95 /* ListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUseCase.swift; sourceTree = "<group>"; };
 		C1780319291673D800E9E0AE /* clean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C178031C291673D800E9E0AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				C1D3C3302917B273000C522C /* HomeRepository.swift */,
-				C15BA612291AAE4D00E0CF95 /* ListRepository.swift */,
+				C15BA612291AAE4D00E0CF95 /* CharacterRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 				C15BA611291AAD8700E0CF95 /* ListProtocols.swift in Sources */,
 				C1D3C3432917B756000C522C /* BuilderProtocol.swift in Sources */,
 				C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */,
-				C15BA613291AAE4D00E0CF95 /* ListRepository.swift in Sources */,
+				C15BA613291AAE4D00E0CF95 /* CharacterRepository.swift in Sources */,
 				C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,8 +11,8 @@ final class ListBuilder: ListBuilderProtocol {
     func build() -> ListViewController {
         let viewController = ListViewController()
         let router = ListRouter(viewController: viewController)
-        let repository = ListRepository()
-        let useCase = ListUseCase(repository: repository)
+        let characterRepository = CharacterRepository()
+        let useCase = ListUseCase(repository: characterRepository)
         let viewModel = ListViewModel(router: router, useCase: useCase)
         viewController.viewModel = viewModel
         return viewController

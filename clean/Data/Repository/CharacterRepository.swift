@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum ListRespositoryError: Error{
+enum CharacterRepositoryError: Error{
     case infoNotFound
 }
 
-protocol ListRepositoryProtocol {
+protocol CharacterRepositoryProtocol {
 }
 
-final class ListRepository: ListRepositoryProtocol {
+final class CharacterRepository: CharacterRepositoryProtocol {
 
 }

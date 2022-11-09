@@ -8,9 +8,9 @@
 import Foundation
 
 final class ListUseCase {
-    let repository: ListRepositoryProtocol
+    let repository: CharacterRepositoryProtocol
 
-    init(repository: ListRepositoryProtocol) {
+    init(repository: CharacterRepositoryProtocol) {
         self.repository = repository
     }
 }
