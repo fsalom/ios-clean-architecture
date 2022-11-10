@@ -9,12 +9,19 @@ final class ListViewModel: ListViewModelProtocol {
     let router: ListRouterProtocol
     var useCase: ListUseCaseProtocol
 
-    var characters = [CharacterDTO]() {        
+    var characters = [CharacterDTO]() {
         didSet {
             listCharactersUpdated?()
         }
     }
-    var hasNextPage = false
+    var hasNextPage = true {
+        didSet {
+            if hasNextPage == true {
+                page += 1
+            }
+        }
+    }
+    var page: Int = 1
     var listCharactersUpdated: (() -> Void)?
     var errorHasOcurred: ((Error) -> Void)?
 
@@ -27,13 +34,7 @@ final class ListViewModel: ListViewModelProtocol {
 extension ListViewModel {
     //MARK: Life cycle
     func viewDidLoad() {
-        Task{
-            do {
-                (self.characters, self.hasNextPage) = try await useCase.getCharactersList(page: 1)
-            } catch {
-                errorHasOcurred?(error)
-            }
-        }
+        loadCharacters()
     }
 
     func viewDidAppear() {
@@ -47,12 +48,19 @@ extension ListViewModel {
     //MARK: Actions
     func loadMoreCharacter(currentItem: Int){
         if (characters.count - 5 < currentItem) && hasNextPage {
-            Task {
-                do {
-                    (self.characters, self.hasNextPage) = try await useCase.getCharactersList(page: 1)
-                } catch {
-                    print(error)
-                }
+            loadCharacters()
+        }
+    }
+
+    func loadCharacters() {
+        if !hasNextPage { return }
+        Task {
+            do {
+                let (characters, hasNextPage) = try await useCase.getCharactersList(page: page)
+                self.characters.append(contentsOf: characters)
+                self.hasNextPage = hasNextPage
+            } catch {
+                errorHasOcurred?(error)
             }
         }
     }
