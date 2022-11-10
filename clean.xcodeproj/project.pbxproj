@@ -20,6 +20,8 @@
 		C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178031E291673D800E9E0AE /* SceneDelegate.swift */; };
 		C1780326291673DA00E9E0AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1780325291673DA00E9E0AE /* Assets.xcassets */; };
 		C1780329291673DA00E9E0AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1780327291673DA00E9E0AE /* LaunchScreen.storyboard */; };
+		C19B6521291D4BCD00D1D112 /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19B651F291D4BCD00D1D112 /* CharacterCell.xib */; };
+		C19B6522291D4BCD00D1D112 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19B6520291D4BCD00D1D112 /* CharacterCell.swift */; };
 		C1D3C32E2917B25A000C522C /* CharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C32D2917B25A000C522C /* CharacterDTO.swift */; };
 		C1D3C3312917B273000C522C /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C3302917B273000C522C /* HomeRepository.swift */; };
 		C1D3C3332917B285000C522C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C3322917B285000C522C /* Character.swift */; };
@@ -51,6 +53,8 @@
 		C1780325291673DA00E9E0AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1780328291673DA00E9E0AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C178032A291673DA00E9E0AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C19B651F291D4BCD00D1D112 /* CharacterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
+		C19B6520291D4BCD00D1D112 /* CharacterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		C1D3C32D2917B25A000C522C /* CharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDTO.swift; sourceTree = "<group>"; };
 		C1D3C3302917B273000C522C /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		C1D3C3322917B285000C522C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 		C178031B291673D800E9E0AE /* clean */ = {
 			isa = PBXGroup;
 			children = (
+				C1D3C34D2919017E000C522C /* DI */,
 				C1D3C33B2917B682000C522C /* Core */,
 				C1D3C3272916741D000C522C /* Domain */,
 				C1D3C32629167417000C522C /* Data */,
@@ -120,10 +125,27 @@
 			path = clean;
 			sourceTree = "<group>";
 		};
+		C19B651D291D4BCD00D1D112 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				C19B651E291D4BCD00D1D112 /* CharacterCell */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		C19B651E291D4BCD00D1D112 /* CharacterCell */ = {
+			isa = PBXGroup;
+			children = (
+				C19B651F291D4BCD00D1D112 /* CharacterCell.xib */,
+				C19B6520291D4BCD00D1D112 /* CharacterCell.swift */,
+			);
+			path = CharacterCell;
+			sourceTree = "<group>";
+		};
 		C1D3C32429167401000C522C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				C1D3C34D2919017E000C522C /* DI */,
+				C19B651D291D4BCD00D1D112 /* Custom */,
 				C1D3C3252916740B000C522C /* App */,
 				C1D3C32C2917B229000C522C /* Modules */,
 			);
@@ -291,6 +313,7 @@
 			files = (
 				C1780329291673DA00E9E0AE /* LaunchScreen.storyboard in Resources */,
 				C1780326291673DA00E9E0AE /* Assets.xcassets in Resources */,
+				C19B6521291D4BCD00D1D112 /* CharacterCell.xib in Resources */,
 				C15BA602291AAC7300E0CF95 /* HomeViewController.xib in Resources */,
 				C15BA60D291AAD8700E0CF95 /* ListViewController.xib in Resources */,
 			);
@@ -309,6 +332,7 @@
 				C15BA60E291AAD8700E0CF95 /* ListViewController.swift in Sources */,
 				C15BA60C291AAD8700E0CF95 /* ListViewModel.swift in Sources */,
 				C1D3C3412917B720000C522C /* HomeProtocols.swift in Sources */,
+				C19B6522291D4BCD00D1D112 /* CharacterCell.swift in Sources */,
 				C15BA610291AAD8700E0CF95 /* ListBuilder.swift in Sources */,
 				C1D3C32E2917B25A000C522C /* CharacterDTO.swift in Sources */,
 				C15BA60F291AAD8700E0CF95 /* ListRouter.swift in Sources */,

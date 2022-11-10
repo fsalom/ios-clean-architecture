@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="clean" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="cFb-Lf-R6F" id="cJf-Cv-Ibd"/>
                 <outlet property="view" destination="iN0-l3-epB" id="n2N-V3-N5H"/>
             </connections>
         </placeholder>
@@ -17,8 +18,20 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cFb-Lf-R6F">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="cFb-Lf-R6F" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="K1c-F1-3ah"/>
+                <constraint firstItem="cFb-Lf-R6F" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Nma-S9-gQ4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cFb-Lf-R6F" secondAttribute="bottom" id="i49-Vm-3mW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cFb-Lf-R6F" secondAttribute="trailing" id="uyh-H6-p2j"/>
+            </constraints>
             <point key="canvasLocation" x="13" y="42"/>
         </view>
     </objects>

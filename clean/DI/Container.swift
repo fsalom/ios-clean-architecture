@@ -15,7 +15,7 @@ final class Container {
 extension Container {
     func home() {
         DispatchQueue.main.async {
-            self.window?.rootViewController = HomeBuilder().build()
+            self.window?.rootViewController = UINavigationController(rootViewController: HomeBuilder().build())
             self.window?.makeKeyAndVisible()
         }
     }
