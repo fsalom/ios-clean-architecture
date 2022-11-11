@@ -13,7 +13,11 @@ class CharacterCell: UITableViewCell {
     @IBOutlet weak var characterName: UILabel!
     @IBOutlet weak var characterImage: UIImageView!
     // MARK: - Life Cycle
-    var character: CharacterDTO!
+    var character: CharacterDTO! {
+        didSet {
+            setupUI()
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -21,8 +25,7 @@ class CharacterCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     // MARK: - Functions
-    func setupUI(for character: CharacterDTO) {
-        self.character = character
+    func setupUI() {
         characterName.text = character.name
         characterImage.layer.borderWidth = 1
         characterImage.layer.masksToBounds = false
@@ -31,7 +34,6 @@ class CharacterCell: UITableViewCell {
         characterImage.clipsToBounds = true
         if let url = URL(string: character.image){
             //characterImage.af.setImage(withURL: url)
-
         }
     }
 }

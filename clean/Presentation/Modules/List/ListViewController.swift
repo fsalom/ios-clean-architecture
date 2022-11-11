@@ -26,7 +26,6 @@ final class ListViewController: BaseViewController {
                 self.tableView.reloadData()
             }
         }
-
         viewModel.errorHasOcurred = { error in
             print(error)
         }
@@ -50,10 +49,8 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         self.viewModel.loadMoreCharacter(currentItem: indexPath.row)
-
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell", for: indexPath) as! CharacterCell
-
-        cell.setupUI(for: viewModel.characters[indexPath.row])
+        cell.character = self.viewModel.characters[indexPath.row]
         return cell
     }
 }
