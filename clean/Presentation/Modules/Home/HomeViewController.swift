@@ -17,6 +17,6 @@ final class HomeViewController: BaseViewController {
 
 
     @IBAction func onPressed(_ sender: Any) {
-        self.navigationController?.present(ListBuilder().build(), animated: true)
+        self.navigationController?.pushViewController(ListBuilder().build(), animated: true)
     }
 }
