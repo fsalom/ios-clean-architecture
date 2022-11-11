@@ -12,8 +12,10 @@ Básicamente tenemos que tener claro un concepto y es Dependencia tenemos que ai
 
 ## Autor
 
-Fernando Salom 
+Fernando Salom
+
 https://fernandosalom.es
+
 https://www.linkedin.com/in/fsalom/
 
 ## Licencia
