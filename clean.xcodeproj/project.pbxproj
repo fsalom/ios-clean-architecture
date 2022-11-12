@@ -86,6 +86,7 @@
 		C15BA605291AAD8700E0CF95 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				C18C4E96292011CF005D2850 /* Cell */,
 				C15BA606291AAD8700E0CF95 /* ListViewModel.swift */,
 				C15BA607291AAD8700E0CF95 /* ListViewController.xib */,
 				C15BA608291AAD8700E0CF95 /* ListViewController.swift */,
@@ -116,10 +117,10 @@
 		C178031B291673D800E9E0AE /* clean */ = {
 			isa = PBXGroup;
 			children = (
-				C1D3C34D2919017E000C522C /* DI */,
 				C1D3C33B2917B682000C522C /* Core */,
-				C1D3C3272916741D000C522C /* Domain */,
+				C1D3C34D2919017E000C522C /* DI */,
 				C1D3C32629167417000C522C /* Data */,
+				C1D3C3272916741D000C522C /* Domain */,
 				C1D3C32429167401000C522C /* Presentation */,
 				C1780325291673DA00E9E0AE /* Assets.xcassets */,
 				C1780327291673DA00E9E0AE /* LaunchScreen.storyboard */,
@@ -128,12 +129,12 @@
 			path = clean;
 			sourceTree = "<group>";
 		};
-		C19B651D291D4BCD00D1D112 /* Custom */ = {
+		C18C4E96292011CF005D2850 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				C19B651E291D4BCD00D1D112 /* CharacterCell */,
 			);
-			path = Custom;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C19B651E291D4BCD00D1D112 /* CharacterCell */ = {
@@ -148,7 +149,6 @@
 		C1D3C32429167401000C522C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				C19B651D291D4BCD00D1D112 /* Custom */,
 				C1D3C3252916740B000C522C /* App */,
 				C1D3C32C2917B229000C522C /* Modules */,
 			);
