@@ -58,6 +58,21 @@ Cada uno estos componentes tiene una función y no deben mezclarse entre ellos. 
     
 - **Presentation**: La capa de presentación mantendrá todo lo relacionado con UI y su gestión.
 
+### Capa de presentación - Modules
+
+Cada módulo esta compuesto por una serie de ficheros que deben ser implementados en cada uno de ellos.
+
+```
+└── Presentation
+    └── Modules
+        ├── ToDoBuilder
+        ├── ToDoProtocols
+        ├── ToDoRouter
+        ├── ToDoViewModel
+        ├── ToDoViewController
+        └── ToDoViewController(UI)
+```
+
 
 ## Autor
 
