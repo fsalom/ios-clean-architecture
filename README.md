@@ -73,6 +73,15 @@ Cada módulo esta compuesto por una serie de ficheros que deben ser implementado
         └── ToDoViewController(UI)
 ```
 
+- **Builder**: constructor del viewController y sus dependencias
+
+- **Protocols**: responsable de declarar todos los protocolos que se usarán en la aplicación   
+
+- **Router**: responsable de la navegación por parte del controlador
+
+- **ViewController**: controlador de la UI para gestionar la lógica del módulo
+
+- **ViewController(UI)**: capa visual del controlador
 
 ## Autor
 
