@@ -32,6 +32,7 @@ class CharacterCell: UITableViewCell {
         characterImage.layer.borderColor = UIColor.gray.cgColor
         characterImage.layer.cornerRadius = self.characterImage.frame.height / 2
         characterImage.clipsToBounds = true
+        characterImage.backgroundColor = .gray
         if let url = URL(string: character.image){
             //characterImage.af.setImage(withURL: url)
         }
