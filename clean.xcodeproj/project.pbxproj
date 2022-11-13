@@ -87,12 +87,12 @@
 			isa = PBXGroup;
 			children = (
 				C18C4E96292011CF005D2850 /* Cell */,
-				C15BA606291AAD8700E0CF95 /* ListViewModel.swift */,
-				C15BA607291AAD8700E0CF95 /* ListViewController.xib */,
-				C15BA608291AAD8700E0CF95 /* ListViewController.swift */,
-				C15BA609291AAD8700E0CF95 /* ListRouter.swift */,
 				C15BA60A291AAD8700E0CF95 /* ListBuilder.swift */,
 				C15BA60B291AAD8700E0CF95 /* ListProtocols.swift */,
+				C15BA609291AAD8700E0CF95 /* ListRouter.swift */,
+				C15BA608291AAD8700E0CF95 /* ListViewController.swift */,
+				C15BA607291AAD8700E0CF95 /* ListViewController.xib */,
+				C15BA606291AAD8700E0CF95 /* ListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -228,12 +228,12 @@
 		C1D3C3362917B30E000C522C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C1D3C3372917B340000C522C /* HomeViewController.swift */,
 				C1D3C33E2917B6EA000C522C /* HomeBuilder.swift */,
 				C1D3C3402917B720000C522C /* HomeProtocols.swift */,
-				C1D3C3442917B816000C522C /* HomeViewModel.swift */,
 				C1D3C3482917B952000C522C /* HomeRouter.swift */,
+				C1D3C3372917B340000C522C /* HomeViewController.swift */,
 				C15BA601291AAC7300E0CF95 /* HomeViewController.xib */,
+				C1D3C3442917B816000C522C /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
