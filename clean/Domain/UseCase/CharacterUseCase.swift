@@ -23,7 +23,7 @@ extension CharacterUseCase: CharacterUseCaseProtocol {
     func getList(page: Int) async throws -> ([CharacterDTO], Bool) {
         do {
             var hasNextPage = false
-            let list = try await repository.getCharactersList(for: page)
+            let list = try await repository.getList(for: page)
             guard let nextPage = list.info.next else {
                 hasNextPage = false
                 return (list.results, hasNextPage)

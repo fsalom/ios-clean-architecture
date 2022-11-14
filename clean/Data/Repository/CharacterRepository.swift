@@ -16,11 +16,11 @@ enum CharacterRepositoryError: Error{
 }
 
 protocol CharacterRepositoryProtocol {
-    func getCharactersList(for page: Int) async throws -> ListDTO
+    func getList(for page: Int) async throws -> ListDTO
 }
 
 final class CharacterRepository: CharacterRepositoryProtocol {
-    func getCharactersList(for page: Int) async throws -> ListDTO {
+    func getList(for page: Int) async throws -> ListDTO {
         guard let url = URL(string: "https://rickandmortyapi.com/api/character/?page=\(page)") else {
             throw CharacterRepositoryError.badURL
         }
