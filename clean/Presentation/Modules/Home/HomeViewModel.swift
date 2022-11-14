@@ -7,11 +7,9 @@
 
 final class HomeViewModel: HomeViewModelProtocol {
     let router: HomeRouterProtocol
-    var useCase: HomeUseCaseProtocol
 
-    init(router: HomeRouterProtocol, useCase: HomeUseCaseProtocol) {
+    init(router: HomeRouterProtocol) {
         self.router = router
-        self.useCase = useCase
     }
 }
 

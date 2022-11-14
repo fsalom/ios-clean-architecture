@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ListUseCase {
+final class CharacterUseCase {
     let repository: CharacterRepositoryProtocol
 
     init(repository: CharacterRepositoryProtocol) {
@@ -15,12 +15,12 @@ final class ListUseCase {
     }
 }
 
-protocol ListUseCaseProtocol {
-    func getCharactersList(page: Int) async throws -> ([CharacterDTO], Bool)
+protocol CharacterUseCaseProtocol {
+    func getList(page: Int) async throws -> ([CharacterDTO], Bool)
 }
 
-extension ListUseCase: ListUseCaseProtocol {
-    func getCharactersList(page: Int) async throws -> ([CharacterDTO], Bool) {
+extension CharacterUseCase: CharacterUseCaseProtocol {
+    func getList(page: Int) async throws -> ([CharacterDTO], Bool) {
         do {
             var hasNextPage = false
             let list = try await repository.getCharactersList(for: page)

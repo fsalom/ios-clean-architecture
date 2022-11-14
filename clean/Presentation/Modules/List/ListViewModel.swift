@@ -7,7 +7,7 @@
 
 final class ListViewModel: ListViewModelProtocol {
     let router: ListRouterProtocol
-    var useCase: ListUseCaseProtocol
+    var characterUseCase: CharacterUseCaseProtocol
 
     var characters = [CharacterDTO]() {
         didSet {
@@ -25,9 +25,9 @@ final class ListViewModel: ListViewModelProtocol {
     var listCharactersUpdated: (() -> Void)?
     var errorHasOcurred: ((Error) -> Void)?
 
-    init(router: ListRouterProtocol, useCase: ListUseCaseProtocol) {
+    init(router: ListRouterProtocol, characterUseCase: CharacterUseCaseProtocol) {
         self.router = router
-        self.useCase = useCase
+        self.characterUseCase = characterUseCase
     }
 }
 
@@ -56,7 +56,7 @@ extension ListViewModel {
         if !hasNextPage { return }
         Task {
             do {
-                let (characters, hasNextPage) = try await useCase.getCharactersList(page: page)
+                let (characters, hasNextPage) = try await characterUseCase.getList(page: page)
                 self.characters.append(contentsOf: characters)
                 self.hasNextPage = hasNextPage
             } catch {

@@ -12,8 +12,8 @@ final class ListBuilder: ListBuilderProtocol {
         let viewController = ListViewController()
         let router = ListRouter(viewController: viewController)
         let characterRepository = CharacterRepository()
-        let useCase = ListUseCase(repository: characterRepository)
-        let viewModel = ListViewModel(router: router, useCase: useCase)
+        let useCase = CharacterUseCase(repository: characterRepository)
+        let viewModel = ListViewModel(router: router, characterUseCase: useCase)
         viewController.viewModel = viewModel
         return viewController
     }
