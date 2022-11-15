@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C15955112921744600F76A1A /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159550F2921744600F76A1A /* CharacterCell.swift */; };
 		C15955122921744600F76A1A /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C15955102921744600F76A1A /* CharacterCell.xib */; };
+		C159551729239CBD00F76A1A /* UImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159551629239CBD00F76A1A /* UImageView.swift */; };
 		C15BA602291AAC7300E0CF95 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C15BA601291AAC7300E0CF95 /* HomeViewController.xib */; };
 		C15BA60C291AAD8700E0CF95 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA606291AAD8700E0CF95 /* ListViewModel.swift */; };
 		C15BA60D291AAD8700E0CF95 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C15BA607291AAD8700E0CF95 /* ListViewController.xib */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		C159550F2921744600F76A1A /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		C15955102921744600F76A1A /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
+		C159551629239CBD00F76A1A /* UImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UImageView.swift; sourceTree = "<group>"; };
 		C15BA601291AAC7300E0CF95 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		C15BA606291AAD8700E0CF95 /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		C15BA607291AAD8700E0CF95 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C159551529239CAA00F76A1A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C159551629239CBD00F76A1A /* UImageView.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		C15BA605291AAD8700E0CF95 /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		C178031B291673D800E9E0AE /* clean */ = {
 			isa = PBXGroup;
 			children = (
+				C159551529239CAA00F76A1A /* Helper */,
 				C1D3C33B2917B682000C522C /* Core */,
 				C1D3C34D2919017E000C522C /* DI */,
 				C1D3C32629167417000C522C /* Data */,
@@ -328,6 +339,7 @@
 				C15BA60E291AAD8700E0CF95 /* ListViewController.swift in Sources */,
 				C15BA60C291AAD8700E0CF95 /* ListViewModel.swift in Sources */,
 				C1D3C3412917B720000C522C /* HomeProtocols.swift in Sources */,
+				C159551729239CBD00F76A1A /* UImageView.swift in Sources */,
 				C15955112921744600F76A1A /* CharacterCell.swift in Sources */,
 				C15BA610291AAD8700E0CF95 /* ListBuilder.swift in Sources */,
 				C1D3C32E2917B25A000C522C /* CharacterDTO.swift in Sources */,

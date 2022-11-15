@@ -7,6 +7,14 @@
 
 import Foundation
 
+enum CharacterUseCaseError: Error{
+    case badURL
+    case badResponse
+    case decodeError
+    case badRequest
+    case invalidResponse
+}
+
 final class CharacterUseCase {
     let repository: CharacterRepositoryProtocol
 
@@ -16,11 +24,12 @@ final class CharacterUseCase {
 }
 
 protocol CharacterUseCaseProtocol {
-    func getList(page: Int) async throws -> ([CharacterDTO], Bool)
+    func getList(for page: Int) async throws -> ([CharacterDTO], Bool)
+    func search(this name: String, for page: Int) async throws -> ([CharacterDTO], Bool)
 }
 
 extension CharacterUseCase: CharacterUseCaseProtocol {
-    func getList(page: Int) async throws -> ([CharacterDTO], Bool) {
+    func getList(for page: Int) async throws -> ([CharacterDTO], Bool) {
         do {
             var hasNextPage = false
             let list = try await repository.getList(for: page)
@@ -29,11 +38,24 @@ extension CharacterUseCase: CharacterUseCaseProtocol {
                 return (list.results, hasNextPage)
             }
             hasNextPage = !nextPage.isEmpty ? true : false
-
             return (list.results, hasNextPage)
         } catch {
             throw error
         }
+    }
 
+    func search(this name: String, for page: Int) async throws -> ([CharacterDTO], Bool) {
+        do {
+            var hasNextPage = false
+            let list = try await repository.search(this: name, for: page)
+            guard let nextPage = list.info.next else {
+                hasNextPage = false
+                return (list.results, hasNextPage)
+            }
+            hasNextPage = !nextPage.isEmpty ? true : false
+            return (list.results, hasNextPage)
+        } catch {
+            throw error
+        }
     }
 }

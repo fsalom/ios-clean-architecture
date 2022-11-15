@@ -52,7 +52,7 @@ Cada uno estos componentes tiene una función y no deben mezclarse entre ellos. 
     
 - **DI**: esta capa contiene la inyección de dependencias de nuestro proyecto que se utiliza a lo largo de la app. En nuestro caso contendrá el Container.swift que contine todas las dependencias del proyecto.
 
-- **Domain**: esta capa se encarga de describir lo que hace el proyecto/aplicación mediante entidades y casos de uso.
+- **Domain**: esta capa se encarga de definir entidades y casos de uso por Dominio.
     - **Entity**: son modelos utilizados más allá de los DTO para gestionar base de datos o core data.
     - **UseCase**: Lista todas las funcionalidades de nuestra aplicación. Ejemplo: Get, Delete, Create , Update.
     

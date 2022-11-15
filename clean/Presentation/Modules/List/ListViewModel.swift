@@ -9,6 +9,22 @@ final class ListViewModel: ListViewModelProtocol {
     let router: ListRouterProtocol
     var characterUseCase: CharacterUseCaseProtocol
 
+    enum Status {
+        case searching
+        case listing
+    }
+
+    var currentSearch: String = "" {
+        willSet {
+            if newValue == currentSearch { return }
+            characters = []
+            hasNextPage = true
+            page = 1
+            currentStatus = currentSearch.isEmpty ? .listing : .searching
+        }
+    }
+    var currentStatus: Status = .listing
+
     var characters = [CharacterDTO]() {
         didSet {
             listCharactersUpdated?()
@@ -48,7 +64,12 @@ extension ListViewModel {
     //MARK: Actions
     func loadMoreCharacter(currentItem: Int){
         if (characters.count - 5 < currentItem) && hasNextPage {
-            loadCharacters()
+            switch currentStatus {
+            case .searching:
+                search(this: currentSearch)
+            case .listing:
+                loadCharacters()
+            }
         }
     }
 
@@ -56,7 +77,25 @@ extension ListViewModel {
         if !hasNextPage { return }
         Task {
             do {
-                let (characters, hasNextPage) = try await characterUseCase.getList(page: page)
+                let (characters, hasNextPage) = try await characterUseCase.getList(for: page)
+                self.characters.append(contentsOf: characters)
+                self.hasNextPage = hasNextPage
+            } catch {
+                errorHasOcurred?(error)
+            }
+        }
+    }
+
+    func search(this name: String) {
+        if name.isEmpty {
+            loadCharacters()
+            return
+        }
+        currentSearch = name
+        if !hasNextPage { return }
+        Task {
+            do {
+                let (characters, hasNextPage) = try await characterUseCase.search(this: name, for: page)
                 self.characters.append(contentsOf: characters)
                 self.hasNextPage = hasNextPage
             } catch {
