@@ -129,9 +129,7 @@
 				C1D3C32629167417000C522C /* Data */,
 				C1D3C3272916741D000C522C /* Domain */,
 				C1D3C32429167401000C522C /* Presentation */,
-				C1780325291673DA00E9E0AE /* Assets.xcassets */,
-				C1780327291673DA00E9E0AE /* LaunchScreen.storyboard */,
-				C178032A291673DA00E9E0AE /* Info.plist */,
+				C1E97E9D292569970086F3A8 /* Resources */,
 			);
 			path = clean;
 			sourceTree = "<group>";
@@ -259,6 +257,16 @@
 				C1D3C34E2919018C000C522C /* Container.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		C1E97E9D292569970086F3A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C1780327291673DA00E9E0AE /* LaunchScreen.storyboard */,
+				C1780325291673DA00E9E0AE /* Assets.xcassets */,
+				C178032A291673DA00E9E0AE /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,7 +505,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R88CDNMKLQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = clean/Info.plist;
+				INFOPLIST_FILE = clean/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -524,7 +532,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R88CDNMKLQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = clean/Info.plist;
+				INFOPLIST_FILE = clean/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

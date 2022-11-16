@@ -22,8 +22,7 @@ final class ListViewController: BaseViewController {
     }
 
     func setupBinding() {
-        viewModel.listCharactersUpdated = { [weak self] in
-            guard let self = self else { return }
+        viewModel.listCharactersUpdated = { 	
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
