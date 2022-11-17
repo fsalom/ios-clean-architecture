@@ -85,7 +85,7 @@ Cada módulo esta compuesto por una serie de ficheros que deben ser implementado
 
 ## Uso de la arquitectura
 
-![imagen arquitectura](README/Arquitectura.png)
+![imagen arquitectura](README/arquitectura.png)
 
 El orden de ejecución se produce en este orden.
 
