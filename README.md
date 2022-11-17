@@ -26,7 +26,7 @@ Esta seria la distribución de carpetas que contendrán nuestro proyecto.
 └── Presentation
 ```
 
-### Visión detallada y descripción
+## Visión detallada y descripción
 
 Cada uno estos componentes tiene una función y no deben mezclarse entre ellos. Teniendo claro donde debe de ir cada una de las lógicas que implementemos.
 
@@ -58,7 +58,7 @@ Cada uno estos componentes tiene una función y no deben mezclarse entre ellos. 
     
 - **Presentation**: La capa de presentación mantendrá todo lo relacionado con UI y su gestión.
 
-### Capa de presentación - Modules
+## Capa de presentación - Modules
 
 Cada módulo esta compuesto por una serie de ficheros que deben ser implementados en cada uno de ellos.
 
@@ -82,6 +82,12 @@ Cada módulo esta compuesto por una serie de ficheros que deben ser implementado
 - **ViewController**: controlador de la UI para gestionar la lógica del módulo
 
 - **ViewController(UI)**: capa visual del controlador
+
+## Uso de la arquitectura
+
+![imagen arquitectura](README/Arquitectura.png)
+
+El orden de ejecución se produce en este orden.
 
 ## Autor
 
