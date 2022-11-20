@@ -87,7 +87,17 @@ Cada módulo esta compuesto por una serie de ficheros que deben ser implementado
 
 ![imagen arquitectura](README/arquitectura.png)
 
-El orden de ejecución se produce en este orden.
+La imagen describe el proceso de obtención de información y como esta se transmite a lo largo de los modulos. 
+
+El `repository` es el encargado de obtener el dato ya sea de una API, base de datos local o cualquier otra fuente de datos.
+
+El `use case` es el responsable de realizar las operaciones necesarias para devolver la información ya tratada al viewModel. 
+Contiene un conjunto de soluciones a diversas situaciones y cada una de ellas resuelve una y sólo una tarea en particular, resolviendo todas sus dependencias para poder ser ejecutada.
+
+El `viewModel` obtiene la información previamente tratada por el use case y ejecuta las funciones que sean necesarias y notifica al `viewController` para que realice los cambios de UI.
+
+El `viewController` es el responsable de ejecutar las acciones relacionadas con el UI
+
 
 ## Autor
 
