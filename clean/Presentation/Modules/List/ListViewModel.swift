@@ -25,7 +25,7 @@ final class ListViewModel: ListViewModelProtocol {
     }
     var currentStatus: Status = .listing
 
-    var characters = [CharacterDTO]() {
+    var characters = [Character]() {
         didSet {
             listCharactersUpdated?()
         }

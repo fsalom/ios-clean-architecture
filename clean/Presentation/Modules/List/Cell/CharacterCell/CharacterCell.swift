@@ -13,7 +13,7 @@ class CharacterCell: UITableViewCell {
     @IBOutlet weak var characterName: UILabel!
     @IBOutlet weak var characterImage: UIImageView!
     // MARK: - Life Cycle
-    var character: CharacterDTO! {
+    var character: Character! {
         didSet {
             setupUI()
         }
