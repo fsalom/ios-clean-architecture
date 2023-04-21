@@ -7,13 +7,6 @@
 
 import Foundation
 
-enum CharacterUseCaseError: Error{
-    case badURL
-    case badResponse
-    case decodeError
-    case badRequest
-    case invalidResponse
-}
 
 final class CharacterUseCase {
     let repository: CharacterRepositoryProtocol
@@ -30,33 +23,15 @@ protocol CharacterUseCaseProtocol {
 
 extension CharacterUseCase: CharacterUseCaseProtocol {
     func getCharactersAndNextPage(for page: Int) async throws -> ([Character], Bool) {
-        do {
-            var hasNextPage = false
-            let list = try await repository.getPagination(for: page)
-            guard let nextPage = list.info.next else {
-                hasNextPage = false
-                return (convertToEntity(these: list.results), hasNextPage)
-            }
-            hasNextPage = !nextPage.isEmpty ? true : false
-            return (convertToEntity(these: list.results), hasNextPage)
-        } catch {
-            throw error
-        }
+        let list = try await repository.getPagination(for: page)
+        let hasNextPage = list.info.next != nil
+        return (convertToEntity(these: list.results), hasNextPage)
     }
 
     func search(this name: String, for page: Int) async throws -> ([Character], Bool) {
-        do {
-            var hasNextPage = false
-            let list = try await repository.search(this: name, for: page)
-            guard let nextPage = list.info.next else {
-                hasNextPage = false
-                return (convertToEntity(these: list.results), hasNextPage)
-            }
-            hasNextPage = !nextPage.isEmpty ? true : false
-            return (convertToEntity(these: list.results), hasNextPage)
-        } catch {
-            throw error
-        }
+        let list = try await repository.search(this: name, for: page)
+        let hasNextPage = list.info.next != nil
+        return (convertToEntity(these: list.results), hasNextPage)
     }
 
     func convertToEntity(these dtos: [CharacterDTO]) -> [Character] {
