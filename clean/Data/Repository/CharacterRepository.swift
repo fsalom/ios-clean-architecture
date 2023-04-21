@@ -7,14 +7,6 @@
 
 import Foundation
 
-enum CharacterRepositoryError: Error{
-    case badURL
-    case badResponse
-    case decodeError
-    case badRequest
-    case invalidResponse
-}
-
 protocol CharacterRepositoryProtocol {
     func getPagination(for page: Int) async throws -> PaginationDTO
     func search(this name: String, for page: Int) async throws -> PaginationDTO
