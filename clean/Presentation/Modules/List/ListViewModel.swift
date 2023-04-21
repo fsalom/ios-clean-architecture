@@ -53,14 +53,6 @@ extension ListViewModel {
         loadCharacters()
     }
 
-    func viewDidAppear() {
-
-    }
-
-    func viewDidDisappear() {
-
-    }
-
     //MARK: Actions
     func loadMoreCharacter(currentItem: Int){
         if (characters.count - 5 < currentItem) && hasNextPage {
@@ -77,7 +69,7 @@ extension ListViewModel {
         if !hasNextPage { return }
         Task {
             do {
-                let (characters, hasNextPage) = try await characterUseCase.getList(for: page)
+                let (characters, hasNextPage) = try await characterUseCase.getCharactersAndNextPage(for: page)
                 self.characters.append(contentsOf: characters)
                 self.hasNextPage = hasNextPage
                 self.listCharactersUpdated?()

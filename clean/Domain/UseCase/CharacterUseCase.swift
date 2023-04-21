@@ -24,12 +24,12 @@ final class CharacterUseCase {
 }
 
 protocol CharacterUseCaseProtocol {
-    func getList(for page: Int) async throws -> ([Character], Bool)
+    func getCharactersAndNextPage(for page: Int) async throws -> ([Character], Bool)
     func search(this name: String, for page: Int) async throws -> ([Character], Bool)
 }
 
 extension CharacterUseCase: CharacterUseCaseProtocol {
-    func getList(for page: Int) async throws -> ([Character], Bool) {
+    func getCharactersAndNextPage(for page: Int) async throws -> ([Character], Bool) {
         do {
             var hasNextPage = false
             let list = try await repository.getPagination(for: page)

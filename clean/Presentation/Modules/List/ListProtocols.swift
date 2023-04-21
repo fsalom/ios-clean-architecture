@@ -11,19 +11,13 @@ protocol ListBuilderProtocol: BuilderProtocol {
     func build() -> ListViewController
 }
 
-protocol ListRouterProtocol {
-    
-}
+protocol ListRouterProtocol { }
 
 protocol ListViewModelProtocol: ViewModelProtocol {
     func viewDidLoad()
-    func viewDidAppear()
-    func viewDidDisappear()
-
     func loadMoreCharacter(currentItem: Int)
     func search(this name: String)
     var characters: [Character] { get set }
-    var hasNextPage: Bool { get set }
     var currentSearch: String { get set }
     var currentStatus: ListViewModel.Status { get set }
     var listCharactersUpdated: (() -> Void)? { get set }
