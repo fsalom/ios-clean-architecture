@@ -32,7 +32,7 @@ extension CharacterUseCase: CharacterUseCaseProtocol {
     func getList(for page: Int) async throws -> ([Character], Bool) {
         do {
             var hasNextPage = false
-            let list = try await repository.getList(for: page)
+            let list = try await repository.getPagination(for: page)
             guard let nextPage = list.info.next else {
                 hasNextPage = false
                 return (convertToEntity(these: list.results), hasNextPage)

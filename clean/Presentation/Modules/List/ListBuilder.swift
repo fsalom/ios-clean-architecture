@@ -10,13 +10,10 @@ import Foundation
 final class ListBuilder: ListBuilderProtocol {
     func build() -> ListViewController {
         let viewController = ListViewController()
-
         let router = ListRouter(viewController: viewController)
-
-        let characterRepository = CharacterRepository()
-
-        let useCase = CharacterUseCase(repository: characterRepository)
-
+        let datasource = CharacterDataSource()
+        let repository = CharacterRepository(datasource: datasource)
+        let useCase = CharacterUseCase(repository: repository)
         let viewModel = ListViewModel(router: router, characterUseCase: useCase)
 
         viewController.viewModel = viewModel

@@ -12,7 +12,7 @@ protocol CharacterDataSourceProtocol {
     func search(this name: String, for page: Int) async throws -> PaginationDTO
 }
 
-class CharacterDataSource {
+class CharacterDataSource: CharacterDataSourceProtocol {
     func getPagination(for page: Int) async throws -> PaginationDTO {
         guard let url = URL(string: "https://rickandmortyapi.com/api/character/?page=\(page)") else {
             throw CharacterRepositoryError.badURL
