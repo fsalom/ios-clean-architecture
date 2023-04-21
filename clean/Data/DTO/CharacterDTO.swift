@@ -18,7 +18,7 @@ struct CharacterDTO: Codable {
     var name: String
 }
 
-struct ListDTO: Codable {
+struct PaginationDTO: Codable {
     var info: InfoDTO
     var results: [CharacterDTO]
 }

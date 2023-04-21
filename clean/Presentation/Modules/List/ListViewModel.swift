@@ -80,6 +80,7 @@ extension ListViewModel {
                 let (characters, hasNextPage) = try await characterUseCase.getList(for: page)
                 self.characters.append(contentsOf: characters)
                 self.hasNextPage = hasNextPage
+                self.listCharactersUpdated?()
             } catch {
                 errorHasOcurred?(error)
             }
