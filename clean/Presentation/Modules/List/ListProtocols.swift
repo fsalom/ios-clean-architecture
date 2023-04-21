@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol ListBuilderProtocol: BuilderProtocol {
+protocol ListBuilderProtocol {
     func build() -> ListViewController
 }
 
 protocol ListRouterProtocol { }
 
-protocol ListViewModelProtocol: ViewModelProtocol {
+protocol ListViewModelProtocol {
     func viewDidLoad()
     func loadMoreCharacter(currentItem: Int)
     func search(this name: String)

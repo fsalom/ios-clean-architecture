@@ -31,10 +31,8 @@
 		C1D3C33D2917B69C000C522C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C33C2917B69C000C522C /* BaseViewController.swift */; };
 		C1D3C33F2917B6EA000C522C /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C33E2917B6EA000C522C /* HomeBuilder.swift */; };
 		C1D3C3412917B720000C522C /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C3402917B720000C522C /* HomeProtocols.swift */; };
-		C1D3C3432917B756000C522C /* BuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C3422917B756000C522C /* BuilderProtocol.swift */; };
 		C1D3C3452917B816000C522C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C3442917B816000C522C /* HomeViewModel.swift */; };
 		C1D3C3492917B952000C522C /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C3482917B952000C522C /* HomeRouter.swift */; };
-		C1D3C34C2917B99D000C522C /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C34B2917B99D000C522C /* ViewModelProtocol.swift */; };
 		C1D3C34F2919018C000C522C /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C34E2919018C000C522C /* Container.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,10 +63,8 @@
 		C1D3C33C2917B69C000C522C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C1D3C33E2917B6EA000C522C /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		C1D3C3402917B720000C522C /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
-		C1D3C3422917B756000C522C /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
 		C1D3C3442917B816000C522C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C1D3C3482917B952000C522C /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		C1D3C34B2917B99D000C522C /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		C1D3C34E2919018C000C522C /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -256,8 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				C1D3C33C2917B69C000C522C /* BaseViewController.swift */,
-				C1D3C3422917B756000C522C /* BuilderProtocol.swift */,
-				C1D3C34B2917B99D000C522C /* ViewModelProtocol.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -371,9 +365,7 @@
 				C1D3C3452917B816000C522C /* HomeViewModel.swift in Sources */,
 				C1D3C3492917B952000C522C /* HomeRouter.swift in Sources */,
 				C1D3C3332917B285000C522C /* Character.swift in Sources */,
-				C1D3C34C2917B99D000C522C /* ViewModelProtocol.swift in Sources */,
 				C15BA611291AAD8700E0CF95 /* ListProtocols.swift in Sources */,
-				C1D3C3432917B756000C522C /* BuilderProtocol.swift in Sources */,
 				C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */,
 				C15BA613291AAE4D00E0CF95 /* CharacterRepository.swift in Sources */,
 				C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */,

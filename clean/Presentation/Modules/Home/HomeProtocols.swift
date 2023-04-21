@@ -7,16 +7,15 @@
 
 import Foundation
 
-protocol HomeBuilderProtocol: BuilderProtocol {
+protocol HomeBuilderProtocol {
     func build() -> HomeViewController
 }
 
 protocol HomeRouterProtocol {
-    
+    func goToList()
 }
 
-protocol HomeViewModelProtocol: ViewModelProtocol {
+protocol HomeViewModelProtocol {
     func viewDidLoad()
-    func viewDidAppear()
-    func viewDidDisappear()
+    func goToList()
 }

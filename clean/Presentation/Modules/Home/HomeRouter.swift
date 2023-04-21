@@ -16,5 +16,8 @@ final class HomeRouter {
 }
 
 extension HomeRouter: HomeRouterProtocol {
+    func goToList() {
+        self.viewController?.navigationController?.pushViewController(ListBuilder().build(), animated: true)
+    }
 }
 

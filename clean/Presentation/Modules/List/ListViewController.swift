@@ -10,9 +10,11 @@ import UIKit
 final class ListViewController: BaseViewController {
     var viewModel: ListViewModelProtocol!
     lazy var searchBar:UISearchBar = UISearchBar()
-
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBinding()
@@ -21,6 +23,7 @@ final class ListViewController: BaseViewController {
         viewModel.viewDidLoad()
     }
 
+    // MARK: - Functions
     func setupBinding() {
         viewModel.listCharactersUpdated = { 	
             DispatchQueue.main.async {

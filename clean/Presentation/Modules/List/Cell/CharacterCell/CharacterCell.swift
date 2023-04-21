@@ -9,15 +9,15 @@
 import UIKit
 class CharacterCell: UITableViewCell {
     // MARK: - IBOutlets
-
     @IBOutlet weak var characterName: UILabel!
     @IBOutlet weak var characterImage: UIImageView!
-    // MARK: - Life Cycle
+
     var character: Character! {
         didSet {
             setupUI()
         }
     }
+    // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }

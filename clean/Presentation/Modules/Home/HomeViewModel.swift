@@ -5,7 +5,7 @@
 //  Created by Fernando Salom Carratala on 6/11/22.
 //
 
-final class HomeViewModel: HomeViewModelProtocol {
+final class HomeViewModel {
     let router: HomeRouterProtocol
 
     init(router: HomeRouterProtocol) {
@@ -13,16 +13,11 @@ final class HomeViewModel: HomeViewModelProtocol {
     }
 }
 
-extension HomeViewModel {
+extension HomeViewModel: HomeViewModelProtocol {
     func viewDidLoad() {
-
     }
 
-    func viewDidAppear() {
-
-    }
-
-    func viewDidDisappear() {
-
+    func goToList() {
+        router.goToList()
     }
 }
