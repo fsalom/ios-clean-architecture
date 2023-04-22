@@ -11,8 +11,10 @@ final class ListBuilder: ListBuilderProtocol {
     func build() -> ListViewController {
         let viewController = ListViewController()
         let router = ListRouter(viewController: viewController)
-        let datasource = CharacterDataSource()
-        let repository = CharacterRepository(datasource: datasource)
+        let networkDatasource = RickAndMortyDataSource()
+        let localDatasource = UDCharacterDataSource()
+        let repository = CharacterRepository(networkDatasource: networkDatasource,
+                                             localDatasource: localDatasource)
         let useCase = CharacterUseCase(repository: repository)
         let viewModel = ListViewModel(router: router, characterUseCase: useCase)
 

@@ -13,17 +13,30 @@ protocol CharacterRepositoryProtocol {
 }
 
 final class CharacterRepository: CharacterRepositoryProtocol {
-    var datasource: CharacterDataSourceProtocol
+    var networkDatasource: CharacterDataSourceProtocol
+    var localDatasource: CharacterDataSourceProtocol
 
-    init(datasource: CharacterDataSourceProtocol) {
-        self.datasource = datasource
+    init(networkDatasource: CharacterDataSourceProtocol,
+         localDatasource: CharacterDataSourceProtocol) {
+        self.networkDatasource = networkDatasource
+        self.localDatasource = localDatasource
     }
 
     func getPagination(for page: Int) async throws -> PaginationDTO {
-        return try await datasource.getPagination(for: page)
+        guard let localPagination = try await localDatasource.getPagination(for: page) else {
+            let networkPagination = try await networkDatasource.getPagination(for: page)
+            Cache.save(objectFor: "PAGE\(page)", this: networkPagination)
+            return networkPagination!
+        }
+        return localPagination
     }
 
     func search(this name: String, for page: Int) async throws -> PaginationDTO {
-        return try await datasource.search(this: name, for: page)
+        guard let localPagination = try await localDatasource.search(this: name, for: page) else {
+            let networkPagination = try await networkDatasource.search(this: name, for: page)
+            Cache.save(objectFor: "PAGE\(page)", this: networkPagination)
+            return networkPagination!
+        }
+        return localPagination
     }
 }
