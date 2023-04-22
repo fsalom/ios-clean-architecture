@@ -34,7 +34,7 @@ final class CharacterRepository: CharacterRepositoryProtocol {
     func search(this name: String, for page: Int) async throws -> PaginationDTO {
         guard let localPagination = try await localDatasource.search(this: name, for: page) else {
             let networkPagination = try await networkDatasource.search(this: name, for: page)
-            Cache.save(objectFor: "PAGE\(page)", this: networkPagination)
+            Cache.save(objectFor: "SEARCH\(name)\(page)", this: networkPagination)
             return networkPagination!
         }
         return localPagination
