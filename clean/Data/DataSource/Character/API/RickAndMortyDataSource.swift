@@ -8,55 +8,25 @@
 import Foundation
 
 class RickAndMortyDataSource: CharacterDataSourceProtocol {
+    var networkManager: NetworkManagerProtocol
+
+    init(networkManager: NetworkManagerProtocol) {
+        self.networkManager = networkManager
+    }
+
     func getPagination(for page: Int) async throws -> PaginationDTO? {
         guard let url = URL(string: "https://rickandmortyapi.com/api/character/?page=\(page)") else {
             throw NetworkError.badURL
         }
         let request = URLRequest(url: url)
-        do {
-            let (data, response) = try await URLSession.shared.data(for: request)
-            print(response)
-            guard let response = response as? HTTPURLResponse else {
-                throw NetworkError.invalidResponse
-            }
-            let decoder = JSONDecoder()
-            do {
-                if (200..<300).contains(response.statusCode) {
-                    return try decoder.decode(PaginationDTO.self, from: data)
-                } else {
-                    throw NetworkError.badResponse
-                }
-            } catch {
-                throw NetworkError.decodeError
-            }
-        } catch {
-            throw NetworkError.badRequest
-        }
+        return try await networkManager.call(this: request, of: PaginationDTO.self)
     }
 
-    func search(this name: String, for page: Int) async throws -> PaginationDTO? {
+    func getPaginationWhenSearching(this name: String, for page: Int) async throws -> PaginationDTO? {
         guard let url = URL(string: "https://rickandmortyapi.com/api/character/?name=\(name)&page=\(page)") else {
             throw NetworkError.badURL
         }
         let request = URLRequest(url: url)
-        do {
-            let (data, response) = try await URLSession.shared.data(for: request)
-            print(response)
-            guard let response = response as? HTTPURLResponse else {
-                throw NetworkError.invalidResponse
-            }
-            let decoder = JSONDecoder()
-            do {
-                if (200..<300).contains(response.statusCode) {
-                    return try decoder.decode(PaginationDTO.self, from: data)
-                } else {
-                    throw NetworkError.badResponse
-                }
-            } catch {
-                throw NetworkError.decodeError
-            }
-        } catch {
-            throw NetworkError.badRequest
-        }
+        return try await networkManager.call(this: request, of: PaginationDTO.self)
     }
 }

@@ -7,8 +7,13 @@
 
 import Foundation
 
-class Cache {
-    static func save<T: Codable>(objectFor: String, this data: T){
+protocol LocalManagerProtocol {
+    func save<T: Codable>(objectFor: String, this data: T)
+    func retrieve<T: Decodable>(objectFor: String, of type: T.Type) -> T?
+}
+
+class CacheManager: LocalManagerProtocol {
+    func save<T: Codable>(objectFor: String, this data: T) {
         guard let encodedData = try? JSONEncoder().encode(data) else {
             print("🤬 ERROR: Cache.save(objectFor: \(objectFor)) > JSON ENCODER ERROR")
             return
@@ -16,7 +21,7 @@ class Cache {
         UserDefaults.standard.set(encodedData, forKey: objectFor)
     }
 
-    static func retrieve<T: Decodable>(objectFor: String, of type: T.Type) -> T? {
+    func retrieve<T: Decodable>(objectFor: String, of type: T.Type) -> T? {
         guard let savedData = UserDefaults.standard.object(forKey: objectFor) as? Data  else { return nil }
         guard let object = try? JSONDecoder().decode(T.self, from: savedData) else { return nil }
         return object

@@ -21,9 +21,9 @@
 		C15BA615291AAE7600E0CF95 /* CharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA614291AAE7600E0CF95 /* CharacterUseCase.swift */; };
 		C174B23B29F2F52A00176AD4 /* RickAndMortyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B23A29F2F52A00176AD4 /* RickAndMortyDataSource.swift */; };
 		C174B23F29F325E600176AD4 /* CharacterDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B23E29F325E600176AD4 /* CharacterDataSourceProtocol.swift */; };
-		C174B24129F3260D00176AD4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B24029F3260D00176AD4 /* NetworkError.swift */; };
 		C174B24529F326C900176AD4 /* UDCharacterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B24429F326C900176AD4 /* UDCharacterDataSource.swift */; };
-		C174B24729F32A6F00176AD4 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B24629F32A6F00176AD4 /* Cache.swift */; };
+		C174B24729F32A6F00176AD4 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B24629F32A6F00176AD4 /* CacheManager.swift */; };
+		C174B32129F6BAA200176AD4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32029F6BAA200176AD4 /* NetworkManager.swift */; };
 		C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178031C291673D800E9E0AE /* AppDelegate.swift */; };
 		C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178031E291673D800E9E0AE /* SceneDelegate.swift */; };
 		C1780326291673DA00E9E0AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1780325291673DA00E9E0AE /* Assets.xcassets */; };
@@ -55,9 +55,9 @@
 		C15BA614291AAE7600E0CF95 /* CharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUseCase.swift; sourceTree = "<group>"; };
 		C174B23A29F2F52A00176AD4 /* RickAndMortyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyDataSource.swift; sourceTree = "<group>"; };
 		C174B23E29F325E600176AD4 /* CharacterDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataSourceProtocol.swift; sourceTree = "<group>"; };
-		C174B24029F3260D00176AD4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		C174B24429F326C900176AD4 /* UDCharacterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDCharacterDataSource.swift; sourceTree = "<group>"; };
-		C174B24629F32A6F00176AD4 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		C174B24629F32A6F00176AD4 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		C174B32029F6BAA200176AD4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C1780319291673D800E9E0AE /* clean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C178031C291673D800E9E0AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C178031E291673D800E9E0AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				C159551629239CBD00F76A1A /* UImageView.swift */,
-				C174B24629F32A6F00176AD4 /* Cache.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -152,6 +151,15 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		C174B31F29F6B6E100176AD4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C174B24629F32A6F00176AD4 /* CacheManager.swift */,
+				C174B32029F6BAA200176AD4 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		C1780310291673D800E9E0AE = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +180,7 @@
 		C178031B291673D800E9E0AE /* clean */ = {
 			isa = PBXGroup;
 			children = (
+				C174B31F29F6B6E100176AD4 /* Manager */,
 				C159551529239CAA00F76A1A /* Helper */,
 				C1D3C33B2917B682000C522C /* Core */,
 				C1D3C34D2919017E000C522C /* DI */,
@@ -295,7 +304,6 @@
 			isa = PBXGroup;
 			children = (
 				C1D3C33C2917B69C000C522C /* BaseViewController.swift */,
-				C174B24029F3260D00176AD4 /* NetworkError.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -394,7 +402,6 @@
 			files = (
 				C174B23F29F325E600176AD4 /* CharacterDataSourceProtocol.swift in Sources */,
 				C1D3C33F2917B6EA000C522C /* HomeBuilder.swift in Sources */,
-				C174B24129F3260D00176AD4 /* NetworkError.swift in Sources */,
 				C15BA60E291AAD8700E0CF95 /* ListViewController.swift in Sources */,
 				C15BA60C291AAD8700E0CF95 /* ListViewModel.swift in Sources */,
 				C1D3C3412917B720000C522C /* HomeProtocols.swift in Sources */,
@@ -408,12 +415,13 @@
 				C1D3C33D2917B69C000C522C /* BaseViewController.swift in Sources */,
 				C15BA615291AAE7600E0CF95 /* CharacterUseCase.swift in Sources */,
 				C174B24529F326C900176AD4 /* UDCharacterDataSource.swift in Sources */,
+				C174B32129F6BAA200176AD4 /* NetworkManager.swift in Sources */,
 				C1D3C34F2919018C000C522C /* Container.swift in Sources */,
 				C1D3C3452917B816000C522C /* HomeViewModel.swift in Sources */,
 				C1D3C3492917B952000C522C /* HomeRouter.swift in Sources */,
 				C1D3C3332917B285000C522C /* Character.swift in Sources */,
 				C15BA611291AAD8700E0CF95 /* ListProtocols.swift in Sources */,
-				C174B24729F32A6F00176AD4 /* Cache.swift in Sources */,
+				C174B24729F32A6F00176AD4 /* CacheManager.swift in Sources */,
 				C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */,
 				C15BA613291AAE4D00E0CF95 /* CharacterRepository.swift in Sources */,
 				C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */,
