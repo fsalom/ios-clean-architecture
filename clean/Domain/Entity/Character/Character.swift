@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Character {
+class Character: CharacterProtocol {
     var name: String
     var image: String
 

@@ -13,7 +13,7 @@ struct InfoDTO: Codable {
     var next: String?
 }
 
-struct CharacterDTO: Codable {
+struct CharacterDTO: Codable, CharacterProtocol {
     var image: String
     var name: String
 }

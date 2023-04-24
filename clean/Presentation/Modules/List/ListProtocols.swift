@@ -17,7 +17,7 @@ protocol ListViewModelProtocol {
     func viewDidLoad()
     func loadMoreCharacter(currentItem: Int)
     func search(this name: String)
-    var characters: [Character] { get set }
+    var characters: [CharacterProtocol] { get set }
     var currentSearch: String { get set }
     var currentStatus: ListViewModel.Status { get set }
     var listCharactersUpdated: (() -> Void)? { get set }

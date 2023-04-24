@@ -12,7 +12,7 @@ class CharacterCell: UITableViewCell {
     @IBOutlet weak var characterName: UILabel!
     @IBOutlet weak var characterImage: UIImageView!
 
-    var character: Character! {
+    var character: CharacterProtocol! {
         didSet {
             setupUI()
         }

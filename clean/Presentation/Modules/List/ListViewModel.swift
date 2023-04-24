@@ -25,7 +25,7 @@ final class ListViewModel: ListViewModelProtocol {
     }
     var currentStatus: Status = .listing
 
-    var characters = [Character]() {
+    var characters = [CharacterProtocol]() {
         didSet {
             listCharactersUpdated?()
         }
@@ -88,7 +88,8 @@ extension ListViewModel {
         if !hasNextPage { return }
         Task {
             do {
-                let (characters, hasNextPage) = try await characterUseCase.search(this: name, for: page)
+                let (characters, hasNextPage) = try await characterUseCase.getCharactersAndNextPageWhenSearching(this: name,
+                                                                                                                 for: page)
                 self.characters.append(contentsOf: characters)
                 self.hasNextPage = hasNextPage
             } catch {

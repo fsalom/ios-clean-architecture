@@ -17,25 +17,29 @@ final class CharacterUseCase {
 }
 
 protocol CharacterUseCaseProtocol {
-    func getCharactersAndNextPage(for page: Int) async throws -> ([Character], Bool)
-    func search(this name: String, for page: Int) async throws -> ([Character], Bool)
+    func getCharactersAndNextPage(for page: Int) async throws -> ([CharacterProtocol],
+                                                                  Bool)
+    func getCharactersAndNextPageWhenSearching(this name: String, for page: Int) async throws -> ([CharacterProtocol],
+                                                                                                  Bool)
 }
 
 extension CharacterUseCase: CharacterUseCaseProtocol {
-    func getCharactersAndNextPage(for page: Int) async throws -> ([Character], Bool) {
+    func getCharactersAndNextPage(for page: Int) async throws -> ([CharacterProtocol],
+                                                                  Bool) {
         let list = try await repository.getPagination(for: page)
         let hasNextPage = list.info.next != nil
         return (convertToEntity(these: list.results), hasNextPage)
     }
 
-    func search(this name: String, for page: Int) async throws -> ([Character], Bool) {
+    func getCharactersAndNextPageWhenSearching(this name: String, for page: Int) async throws -> ([CharacterProtocol],
+                                                                                                  Bool) {
         let list = try await repository.search(this: name, for: page)
         let hasNextPage = list.info.next != nil
         return (convertToEntity(these: list.results), hasNextPage)
     }
 
-    func convertToEntity(these dtos: [CharacterDTO]) -> [Character] {
-        var characters = [Character]()
+    func convertToEntity(these dtos: [CharacterDTO]) -> [CharacterProtocol] {
+        var characters = [CharacterProtocol]()
         dtos.forEach { characterDTO in
             characters.append(Character(dto: characterDTO))
         }
