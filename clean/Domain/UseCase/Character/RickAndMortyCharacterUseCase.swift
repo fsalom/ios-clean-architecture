@@ -9,7 +9,7 @@ import Foundation
 
 import Foundation
 
-final class RickAndMortyCharacterUseCase {
+final actor RickAndMortyCharacterUseCase {
     let repository: CharacterRepositoryProtocol
 
     init(repository: CharacterRepositoryProtocol) {

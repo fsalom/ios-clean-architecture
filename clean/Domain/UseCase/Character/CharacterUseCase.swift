@@ -31,16 +31,17 @@ extension CharacterUseCase: CharacterUseCaseProtocol {
         return (convertToEntity(these: list.results), hasNextPage)
     }
 
-    func getCharactersAndNextPageWhenSearching(this name: String, for page: Int) async throws -> ([CharacterProtocol],
+    func getCharactersAndNextPageWhenSearching(this name: String,
+                                               for page: Int) async throws -> ([CharacterProtocol],
                                                                                                   Bool) {
-        let list = try await repository.search(this: name, for: page)
+        let list = try await repository.getPaginationWhenSearching(this: name, for: page)
         let hasNextPage = list.info.next != nil
         return (convertToEntity(these: list.results), hasNextPage)
     }
 
-    func convertToEntity(these dtos: [CharacterDTO]) -> [CharacterProtocol] {
-        var characters = [CharacterProtocol]()
-        dtos.forEach { characterDTO in
+    func convertToEntity(these dtos: [CharacterDTO]?) -> [CharacterProtocol] {
+        var characters = [CharacterProtocol]()        
+        dtos?.forEach { characterDTO in
             characters.append(Character(dto: characterDTO))
         }
         return characters
