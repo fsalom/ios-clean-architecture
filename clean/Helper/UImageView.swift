@@ -10,12 +10,15 @@ import UIKit
 extension UIImageView {
     func load(url: URL) {
         self.image = nil
-        let backupURL = url
+        let tag = self.tag + 1
+        self.tag = tag
+
         DispatchQueue.global().async { [weak self] in
+            let backupURL = url
             if let data = try? Data(contentsOf: url) {
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
-                        if url == backupURL {
+                        if self?.tag == tag && url == backupURL {
                             self?.image = image
                         }
                     }
