@@ -11,3 +11,4 @@ protocol CharacterDataSourceProtocol {
     func getPagination(for page: Int) async throws -> PaginationDTO?
     func getPaginationWhenSearching(this name: String, for page: Int) async throws -> PaginationDTO?
 }
+

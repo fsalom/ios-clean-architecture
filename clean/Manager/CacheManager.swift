@@ -10,6 +10,7 @@ import Foundation
 protocol LocalManagerProtocol {
     func save<T: Codable>(objectFor: String, this data: T)
     func retrieve<T: Decodable>(objectFor: String, of type: T.Type) -> T?
+    func clear()
 }
 
 class CacheManager: LocalManagerProtocol {
@@ -25,5 +26,11 @@ class CacheManager: LocalManagerProtocol {
         guard let savedData = UserDefaults.standard.object(forKey: objectFor) as? Data  else { return nil }
         guard let object = try? JSONDecoder().decode(T.self, from: savedData) else { return nil }
         return object
+    }
+
+    func clear() {
+        let domain = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: domain)
+        UserDefaults.standard.synchronize()
     }
 }

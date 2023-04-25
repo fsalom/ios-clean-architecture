@@ -25,6 +25,14 @@
 		C174B24729F32A6F00176AD4 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B24629F32A6F00176AD4 /* CacheManager.swift */; };
 		C174B32129F6BAA200176AD4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32029F6BAA200176AD4 /* NetworkManager.swift */; };
 		C174B32429F6BCCC00176AD4 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32329F6BCCC00176AD4 /* Protocol.swift */; };
+		C174B32829F6C62100176AD4 /* RickAndMortyCharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32629F6C62100176AD4 /* RickAndMortyCharacterCell.swift */; };
+		C174B32929F6C62100176AD4 /* RickAndMortyCharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C174B32729F6C62100176AD4 /* RickAndMortyCharacterCell.xib */; };
+		C174B32C29F6C70200176AD4 /* RickAndMortyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32B29F6C70200176AD4 /* RickAndMortyCharacter.swift */; };
+		C174B32F29F6D09900176AD4 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32E29F6D09900176AD4 /* Source.swift */; };
+		C174B33229F7D5BA00176AD4 /* RickAndMortyCharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B33129F7D5BA00176AD4 /* RickAndMortyCharacterUseCase.swift */; };
+		C174B33429F7D64200176AD4 /* DisneyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B33329F7D64200176AD4 /* DisneyDataSource.swift */; };
+		C174B33629F7D7A200176AD4 /* DisneyCharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B33529F7D7A200176AD4 /* DisneyCharacterUseCase.swift */; };
+		C174B33829F7D7C600176AD4 /* DisneyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B33729F7D7C600176AD4 /* DisneyCharacter.swift */; };
 		C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178031C291673D800E9E0AE /* AppDelegate.swift */; };
 		C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178031E291673D800E9E0AE /* SceneDelegate.swift */; };
 		C1780326291673DA00E9E0AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1780325291673DA00E9E0AE /* Assets.xcassets */; };
@@ -60,6 +68,14 @@
 		C174B24629F32A6F00176AD4 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		C174B32029F6BAA200176AD4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C174B32329F6BCCC00176AD4 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		C174B32629F6C62100176AD4 /* RickAndMortyCharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyCharacterCell.swift; sourceTree = "<group>"; };
+		C174B32729F6C62100176AD4 /* RickAndMortyCharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RickAndMortyCharacterCell.xib; sourceTree = "<group>"; };
+		C174B32B29F6C70200176AD4 /* RickAndMortyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyCharacter.swift; sourceTree = "<group>"; };
+		C174B32E29F6D09900176AD4 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		C174B33129F7D5BA00176AD4 /* RickAndMortyCharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyCharacterUseCase.swift; sourceTree = "<group>"; };
+		C174B33329F7D64200176AD4 /* DisneyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyDataSource.swift; sourceTree = "<group>"; };
+		C174B33529F7D7A200176AD4 /* DisneyCharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterUseCase.swift; sourceTree = "<group>"; };
+		C174B33729F7D7C600176AD4 /* DisneyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacter.swift; sourceTree = "<group>"; };
 		C1780319291673D800E9E0AE /* clean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C178031C291673D800E9E0AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C178031E291673D800E9E0AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,9 +120,9 @@
 				C15BA60A291AAD8700E0CF95 /* ListBuilder.swift */,
 				C15BA60B291AAD8700E0CF95 /* ListProtocols.swift */,
 				C15BA609291AAD8700E0CF95 /* ListRouter.swift */,
+				C15BA606291AAD8700E0CF95 /* ListViewModel.swift */,
 				C15BA608291AAD8700E0CF95 /* ListViewController.swift */,
 				C15BA607291AAD8700E0CF95 /* ListViewController.xib */,
-				C15BA606291AAD8700E0CF95 /* ListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -141,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				C174B23A29F2F52A00176AD4 /* RickAndMortyDataSource.swift */,
+				C174B33329F7D64200176AD4 /* DisneyDataSource.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -165,8 +182,37 @@
 		C174B32229F6BCC000176AD4 /* Character */ = {
 			isa = PBXGroup;
 			children = (
-				C1D3C3322917B285000C522C /* Character.swift */,
 				C174B32329F6BCCC00176AD4 /* Protocol.swift */,
+				C1D3C3322917B285000C522C /* Character.swift */,
+				C174B33729F7D7C600176AD4 /* DisneyCharacter.swift */,
+				C174B32B29F6C70200176AD4 /* RickAndMortyCharacter.swift */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		C174B32529F6C57900176AD4 /* RickAndMortyCell */ = {
+			isa = PBXGroup;
+			children = (
+				C174B32629F6C62100176AD4 /* RickAndMortyCharacterCell.swift */,
+				C174B32729F6C62100176AD4 /* RickAndMortyCharacterCell.xib */,
+			);
+			path = RickAndMortyCell;
+			sourceTree = "<group>";
+		};
+		C174B32D29F6D08C00176AD4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C174B32E29F6D09900176AD4 /* Source.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C174B33029F7D59A00176AD4 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				C15BA614291AAE7600E0CF95 /* CharacterUseCase.swift */,
+				C174B33129F7D5BA00176AD4 /* RickAndMortyCharacterUseCase.swift */,
+				C174B33529F7D7A200176AD4 /* DisneyCharacterUseCase.swift */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -206,6 +252,7 @@
 		C18C4E96292011CF005D2850 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				C174B32529F6C57900176AD4 /* RickAndMortyCell */,
 				C19B651E291D4BCD00D1D112 /* CharacterCell */,
 			);
 			path = Cell;
@@ -276,6 +323,7 @@
 		C1D3C32A2917B1B5000C522C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				C174B32D29F6D08C00176AD4 /* Source */,
 				C174B32229F6BCC000176AD4 /* Character */,
 			);
 			path = Entity;
@@ -284,7 +332,7 @@
 		C1D3C32B2917B21A000C522C /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				C15BA614291AAE7600E0CF95 /* CharacterUseCase.swift */,
+				C174B33029F7D59A00176AD4 /* Character */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -304,9 +352,9 @@
 				C1D3C33E2917B6EA000C522C /* HomeBuilder.swift */,
 				C1D3C3402917B720000C522C /* HomeProtocols.swift */,
 				C1D3C3482917B952000C522C /* HomeRouter.swift */,
+				C1D3C3442917B816000C522C /* HomeViewModel.swift */,
 				C1D3C3372917B340000C522C /* HomeViewController.swift */,
 				C15BA601291AAC7300E0CF95 /* HomeViewController.xib */,
-				C1D3C3442917B816000C522C /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -401,6 +449,7 @@
 				C1780326291673DA00E9E0AE /* Assets.xcassets in Resources */,
 				C15BA602291AAC7300E0CF95 /* HomeViewController.xib in Resources */,
 				C15BA60D291AAD8700E0CF95 /* ListViewController.xib in Resources */,
+				C174B32929F6C62100176AD4 /* RickAndMortyCharacterCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,11 +460,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C174B32829F6C62100176AD4 /* RickAndMortyCharacterCell.swift in Sources */,
 				C174B23F29F325E600176AD4 /* CharacterDataSourceProtocol.swift in Sources */,
 				C174B32429F6BCCC00176AD4 /* Protocol.swift in Sources */,
 				C1D3C33F2917B6EA000C522C /* HomeBuilder.swift in Sources */,
 				C15BA60E291AAD8700E0CF95 /* ListViewController.swift in Sources */,
 				C15BA60C291AAD8700E0CF95 /* ListViewModel.swift in Sources */,
+				C174B33229F7D5BA00176AD4 /* RickAndMortyCharacterUseCase.swift in Sources */,
 				C1D3C3412917B720000C522C /* HomeProtocols.swift in Sources */,
 				C159551729239CBD00F76A1A /* UImageView.swift in Sources */,
 				C15955112921744600F76A1A /* CharacterCell.swift in Sources */,
@@ -426,15 +477,20 @@
 				C1D3C3382917B340000C522C /* HomeViewController.swift in Sources */,
 				C1D3C33D2917B69C000C522C /* BaseViewController.swift in Sources */,
 				C15BA615291AAE7600E0CF95 /* CharacterUseCase.swift in Sources */,
+				C174B32F29F6D09900176AD4 /* Source.swift in Sources */,
+				C174B33829F7D7C600176AD4 /* DisneyCharacter.swift in Sources */,
 				C174B24529F326C900176AD4 /* UDCharacterDataSource.swift in Sources */,
 				C174B32129F6BAA200176AD4 /* NetworkManager.swift in Sources */,
 				C1D3C34F2919018C000C522C /* Container.swift in Sources */,
 				C1D3C3452917B816000C522C /* HomeViewModel.swift in Sources */,
 				C1D3C3492917B952000C522C /* HomeRouter.swift in Sources */,
 				C1D3C3332917B285000C522C /* Character.swift in Sources */,
+				C174B32C29F6C70200176AD4 /* RickAndMortyCharacter.swift in Sources */,
+				C174B33629F7D7A200176AD4 /* DisneyCharacterUseCase.swift in Sources */,
 				C15BA611291AAD8700E0CF95 /* ListProtocols.swift in Sources */,
 				C174B24729F32A6F00176AD4 /* CacheManager.swift in Sources */,
 				C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */,
+				C174B33429F7D64200176AD4 /* DisneyDataSource.swift in Sources */,
 				C15BA613291AAE4D00E0CF95 /* CharacterRepository.swift in Sources */,
 				C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */,
 			);

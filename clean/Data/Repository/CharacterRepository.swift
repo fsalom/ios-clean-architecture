@@ -9,7 +9,7 @@ import Foundation
 
 protocol CharacterRepositoryProtocol {
     func getPagination(for page: Int) async throws -> PaginationDTO
-    func search(this name: String, for page: Int) async throws -> PaginationDTO
+    func getPaginationWhenSearching(this name: String, for page: Int) async throws -> PaginationDTO
 }
 
 final class CharacterRepository: CharacterRepositoryProtocol {
@@ -34,7 +34,7 @@ final class CharacterRepository: CharacterRepositoryProtocol {
         return localPagination
     }
 
-    func search(this name: String, for page: Int) async throws -> PaginationDTO {
+    func getPaginationWhenSearching(this name: String, for page: Int) async throws -> PaginationDTO {
         guard let localPagination = try await localDatasource.getPaginationWhenSearching(this: name, for: page) else {
             let networkPagination = try await networkDatasource.getPaginationWhenSearching(this: name, for: page)
             cacheManager.save(objectFor: "SEARCH\(name)\(page)", this: networkPagination)

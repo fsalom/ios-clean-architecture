@@ -8,15 +8,16 @@
 import Foundation
 
 class Character: CharacterProtocol {
-    var name: String
-    var image: String
+    // MARK: Generic character
+    var name: String?
+    var image: String?
 
     init(name: String, image: String) {
         self.name = name
         self.image = image
     }
 
-    init(dto: CharacterDTO) {
+    init(dto: CharacterProtocol) {
         self.name = dto.name
         self.image = dto.image
     }
