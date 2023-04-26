@@ -15,7 +15,8 @@ class DisneyDataSource: CharacterDataSourceProtocol {
     }
 
     func getPagination(for page: Int) async throws -> PaginationDTO? {
-        guard let url = URL(string: "https://api.disneyapi.dev/character/?page=\(page)") else {
+        guard let url = URL(string:
+                                "https://api.disneyapi.dev/character/?page=\(page)") else {
             throw NetworkError.badURL
         }
         let request = URLRequest(url: url)
@@ -23,7 +24,7 @@ class DisneyDataSource: CharacterDataSourceProtocol {
     }
 
     func getPaginationWhenSearching(this name: String, for page: Int) async throws -> PaginationDTO? {
-        guard let url = URL(string: "https://api.disneyapi.dev/character/?name=\(name)&page=\(page)") else {
+        guard let url = URL(string: "https://api.disneyapi.dev/character/?name=\(name)") else {
             throw NetworkError.badURL
         }
         let request = URLRequest(url: url)
