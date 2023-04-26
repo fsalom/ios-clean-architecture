@@ -11,6 +11,7 @@ class RickAndMortyCharacterCell: UITableViewCell {
     // MARK: - IBOutlets
     @IBOutlet weak var characterName: UILabel!
     @IBOutlet weak var statusView: UIView!
+    @IBOutlet weak var specieLabel: UILabel!
     @IBOutlet weak var characterImage: UIImageView!
 
     var character: (CharacterProtocol & RickAndMortyCharacterProtocol)! {
@@ -30,13 +31,14 @@ class RickAndMortyCharacterCell: UITableViewCell {
     }
     // MARK: - Functions
     func setupUI() {
+        characterImage.image = nil
         characterName.text = character.name
+        specieLabel.text = character.species
         characterImage.layer.masksToBounds = false
         characterImage.layer.cornerRadius = 10
         characterImage.clipsToBounds = true
         characterImage.backgroundColor = .white
-        statusView.layer.cornerRadius = 10
-
+        statusView.layer.cornerRadius = statusView.frame.width / 2
         if let urlString = character.image, let url = URL(string: urlString) {
             characterImage.load(url: url)
         }
