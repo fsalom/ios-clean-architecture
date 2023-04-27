@@ -8,6 +8,7 @@
 import UIKit
 
 class MarvelCell: UITableViewCell {
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var marvelCharacterImage: UIImageView!
 
     var character: (CharacterProtocol & MarvelCharacterProtocol)! {
@@ -30,6 +31,7 @@ class MarvelCell: UITableViewCell {
         marvelCharacterImage.layer.masksToBounds = false
         marvelCharacterImage.clipsToBounds = true
         marvelCharacterImage.backgroundColor = .white
+        nameLabel.text = character.name
         if let urlString = character.image, let url = URL(string: urlString) {
             marvelCharacterImage.load(url: url)
         }
