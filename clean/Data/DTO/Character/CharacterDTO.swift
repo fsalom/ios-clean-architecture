@@ -20,7 +20,10 @@ struct InfoDTO: Codable, DisneyInfoPaginationProtocol {
 struct CharacterDTO: Codable,
                      CharacterProtocol,
                      RickAndMortyCharacterProtocol,
-                     DisneyCharacterProtocol {
+                     DisneyCharacterProtocol,
+                     MarvelCharacterProtocol {
+
+
     // MARK: generic character
     var image: String?
     var name: String?
@@ -31,12 +34,22 @@ struct CharacterDTO: Codable,
     var type: String?
     var gender: String?
 
-    // MARK: Diney character
+    // MARK: Disney character
     var imageUrl: String?
+
+    // MARK: Marvel character
+    var id: Int?
+    var thumbnail: MarvelImageDTO?
 }
 
-struct PaginationDTO: Codable {
-    var info: InfoDTO
+struct PaginationDTO: Codable, MarvelPaginationProtocol {
+    var offset: Int?
+    var limit: Int?
+    var total: Int?
+    var count: Int?
+    var info: InfoDTO?
     var results: [CharacterDTO]?
     var data: [CharacterDTO]?
 }
+
+
