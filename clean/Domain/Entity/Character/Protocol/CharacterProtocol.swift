@@ -31,3 +31,15 @@ protocol DisneyInfoPaginationProtocol {
 protocol DisneyPaginationProtocol {
     var data: [DisneyCharacterProtocol & CharacterProtocol] { get set }
 }
+
+protocol MarvelPaginationProtocol {
+    var offset: Int? { get set }
+    var limit: Int? { get set }
+    var total: Int? { get set }
+    var count: Int? { get set }
+}
+
+protocol MarvelCharacterProtocol {
+    var id: Int? { get set }
+    var thumbnail: MarvelImageDTO? { get set }
+}

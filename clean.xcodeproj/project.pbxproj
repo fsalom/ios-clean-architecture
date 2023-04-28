@@ -24,7 +24,7 @@
 		C174B24529F326C900176AD4 /* UDCharacterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B24429F326C900176AD4 /* UDCharacterDataSource.swift */; };
 		C174B24729F32A6F00176AD4 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B24629F32A6F00176AD4 /* CacheManager.swift */; };
 		C174B32129F6BAA200176AD4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32029F6BAA200176AD4 /* NetworkManager.swift */; };
-		C174B32429F6BCCC00176AD4 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32329F6BCCC00176AD4 /* Protocol.swift */; };
+		C174B32429F6BCCC00176AD4 /* CharacterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32329F6BCCC00176AD4 /* CharacterProtocol.swift */; };
 		C174B32829F6C62100176AD4 /* RickAndMortyCharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32629F6C62100176AD4 /* RickAndMortyCharacterCell.swift */; };
 		C174B32929F6C62100176AD4 /* RickAndMortyCharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C174B32729F6C62100176AD4 /* RickAndMortyCharacterCell.xib */; };
 		C174B32C29F6C70200176AD4 /* RickAndMortyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32B29F6C70200176AD4 /* RickAndMortyCharacter.swift */; };
@@ -33,6 +33,15 @@
 		C174B33429F7D64200176AD4 /* DisneyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B33329F7D64200176AD4 /* DisneyDataSource.swift */; };
 		C174B33629F7D7A200176AD4 /* DisneyCharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B33529F7D7A200176AD4 /* DisneyCharacterUseCase.swift */; };
 		C174B33829F7D7C600176AD4 /* DisneyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B33729F7D7C600176AD4 /* DisneyCharacter.swift */; };
+		C174B97129F8528200176AD4 /* DisneyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B96F29F8528100176AD4 /* DisneyCell.swift */; };
+		C174B97229F8528200176AD4 /* DisneyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C174B97029F8528200176AD4 /* DisneyCell.xib */; };
+		C174B97429F85AF400176AD4 /* MarvelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B97329F85AF400176AD4 /* MarvelDataSource.swift */; };
+		C174B97729F908D100176AD4 /* MarvelCharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B97629F908D100176AD4 /* MarvelCharacterDTO.swift */; };
+		C174B97929F90E7D00176AD4 /* MarvelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B97829F90E7D00176AD4 /* MarvelUseCase.swift */; };
+		C174B97B29F90EBC00176AD4 /* MarvelCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B97A29F90EBC00176AD4 /* MarvelCharacter.swift */; };
+		C174B97F29F9107C00176AD4 /* MarvelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B97D29F9107C00176AD4 /* MarvelCell.swift */; };
+		C174B98029F9107C00176AD4 /* MarvelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C174B97E29F9107C00176AD4 /* MarvelCell.xib */; };
+		C174B98429F9626200176AD4 /* CharacterUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B98329F9626200176AD4 /* CharacterUseCaseProtocol.swift */; };
 		C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178031C291673D800E9E0AE /* AppDelegate.swift */; };
 		C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178031E291673D800E9E0AE /* SceneDelegate.swift */; };
 		C1780326291673DA00E9E0AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1780325291673DA00E9E0AE /* Assets.xcassets */; };
@@ -67,7 +76,7 @@
 		C174B24429F326C900176AD4 /* UDCharacterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDCharacterDataSource.swift; sourceTree = "<group>"; };
 		C174B24629F32A6F00176AD4 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		C174B32029F6BAA200176AD4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		C174B32329F6BCCC00176AD4 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		C174B32329F6BCCC00176AD4 /* CharacterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterProtocol.swift; sourceTree = "<group>"; };
 		C174B32629F6C62100176AD4 /* RickAndMortyCharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyCharacterCell.swift; sourceTree = "<group>"; };
 		C174B32729F6C62100176AD4 /* RickAndMortyCharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RickAndMortyCharacterCell.xib; sourceTree = "<group>"; };
 		C174B32B29F6C70200176AD4 /* RickAndMortyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyCharacter.swift; sourceTree = "<group>"; };
@@ -76,6 +85,15 @@
 		C174B33329F7D64200176AD4 /* DisneyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyDataSource.swift; sourceTree = "<group>"; };
 		C174B33529F7D7A200176AD4 /* DisneyCharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterUseCase.swift; sourceTree = "<group>"; };
 		C174B33729F7D7C600176AD4 /* DisneyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacter.swift; sourceTree = "<group>"; };
+		C174B96F29F8528100176AD4 /* DisneyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCell.swift; sourceTree = "<group>"; };
+		C174B97029F8528200176AD4 /* DisneyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisneyCell.xib; sourceTree = "<group>"; };
+		C174B97329F85AF400176AD4 /* MarvelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDataSource.swift; sourceTree = "<group>"; };
+		C174B97629F908D100176AD4 /* MarvelCharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterDTO.swift; sourceTree = "<group>"; };
+		C174B97829F90E7D00176AD4 /* MarvelUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelUseCase.swift; sourceTree = "<group>"; };
+		C174B97A29F90EBC00176AD4 /* MarvelCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacter.swift; sourceTree = "<group>"; };
+		C174B97D29F9107C00176AD4 /* MarvelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCell.swift; sourceTree = "<group>"; };
+		C174B97E29F9107C00176AD4 /* MarvelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarvelCell.xib; sourceTree = "<group>"; };
+		C174B98329F9626200176AD4 /* CharacterUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUseCaseProtocol.swift; sourceTree = "<group>"; };
 		C1780319291673D800E9E0AE /* clean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C178031C291673D800E9E0AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C178031E291673D800E9E0AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +176,7 @@
 			children = (
 				C174B23A29F2F52A00176AD4 /* RickAndMortyDataSource.swift */,
 				C174B33329F7D64200176AD4 /* DisneyDataSource.swift */,
+				C174B97329F85AF400176AD4 /* MarvelDataSource.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -182,10 +201,11 @@
 		C174B32229F6BCC000176AD4 /* Character */ = {
 			isa = PBXGroup;
 			children = (
-				C174B32329F6BCCC00176AD4 /* Protocol.swift */,
+				C174B98129F9622600176AD4 /* Protocol */,
 				C1D3C3322917B285000C522C /* Character.swift */,
 				C174B33729F7D7C600176AD4 /* DisneyCharacter.swift */,
 				C174B32B29F6C70200176AD4 /* RickAndMortyCharacter.swift */,
+				C174B97A29F90EBC00176AD4 /* MarvelCharacter.swift */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -210,11 +230,56 @@
 		C174B33029F7D59A00176AD4 /* Character */ = {
 			isa = PBXGroup;
 			children = (
+				C174B98229F9624D00176AD4 /* Protocol */,
 				C15BA614291AAE7600E0CF95 /* CharacterUseCase.swift */,
 				C174B33129F7D5BA00176AD4 /* RickAndMortyCharacterUseCase.swift */,
 				C174B33529F7D7A200176AD4 /* DisneyCharacterUseCase.swift */,
+				C174B97829F90E7D00176AD4 /* MarvelUseCase.swift */,
 			);
 			path = Character;
+			sourceTree = "<group>";
+		};
+		C174B96E29F8526C00176AD4 /* DisneyCell */ = {
+			isa = PBXGroup;
+			children = (
+				C174B96F29F8528100176AD4 /* DisneyCell.swift */,
+				C174B97029F8528200176AD4 /* DisneyCell.xib */,
+			);
+			path = DisneyCell;
+			sourceTree = "<group>";
+		};
+		C174B97529F908BC00176AD4 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				C1D3C32D2917B25A000C522C /* CharacterDTO.swift */,
+				C174B97629F908D100176AD4 /* MarvelCharacterDTO.swift */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		C174B97C29F9106900176AD4 /* MarvelCell */ = {
+			isa = PBXGroup;
+			children = (
+				C174B97D29F9107C00176AD4 /* MarvelCell.swift */,
+				C174B97E29F9107C00176AD4 /* MarvelCell.xib */,
+			);
+			path = MarvelCell;
+			sourceTree = "<group>";
+		};
+		C174B98129F9622600176AD4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C174B32329F6BCCC00176AD4 /* CharacterProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C174B98229F9624D00176AD4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C174B98329F9626200176AD4 /* CharacterUseCaseProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		C1780310291673D800E9E0AE = {
@@ -252,6 +317,8 @@
 		C18C4E96292011CF005D2850 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				C174B97C29F9106900176AD4 /* MarvelCell */,
+				C174B96E29F8526C00176AD4 /* DisneyCell */,
 				C174B32529F6C57900176AD4 /* RickAndMortyCell */,
 				C19B651E291D4BCD00D1D112 /* CharacterCell */,
 			);
@@ -315,7 +382,7 @@
 		C1D3C329291674C5000C522C /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				C1D3C32D2917B25A000C522C /* CharacterDTO.swift */,
+				C174B97529F908BC00176AD4 /* Character */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -446,6 +513,8 @@
 				C18C4E95291EE5A6005D2850 /* README.md in Resources */,
 				C15955122921744600F76A1A /* CharacterCell.xib in Resources */,
 				C1780329291673DA00E9E0AE /* LaunchScreen.storyboard in Resources */,
+				C174B98029F9107C00176AD4 /* MarvelCell.xib in Resources */,
+				C174B97229F8528200176AD4 /* DisneyCell.xib in Resources */,
 				C1780326291673DA00E9E0AE /* Assets.xcassets in Resources */,
 				C15BA602291AAC7300E0CF95 /* HomeViewController.xib in Resources */,
 				C15BA60D291AAD8700E0CF95 /* ListViewController.xib in Resources */,
@@ -462,17 +531,22 @@
 			files = (
 				C174B32829F6C62100176AD4 /* RickAndMortyCharacterCell.swift in Sources */,
 				C174B23F29F325E600176AD4 /* CharacterDataSourceProtocol.swift in Sources */,
-				C174B32429F6BCCC00176AD4 /* Protocol.swift in Sources */,
+				C174B32429F6BCCC00176AD4 /* CharacterProtocol.swift in Sources */,
+				C174B97129F8528200176AD4 /* DisneyCell.swift in Sources */,
 				C1D3C33F2917B6EA000C522C /* HomeBuilder.swift in Sources */,
 				C15BA60E291AAD8700E0CF95 /* ListViewController.swift in Sources */,
 				C15BA60C291AAD8700E0CF95 /* ListViewModel.swift in Sources */,
 				C174B33229F7D5BA00176AD4 /* RickAndMortyCharacterUseCase.swift in Sources */,
 				C1D3C3412917B720000C522C /* HomeProtocols.swift in Sources */,
 				C159551729239CBD00F76A1A /* UImageView.swift in Sources */,
+				C174B97429F85AF400176AD4 /* MarvelDataSource.swift in Sources */,
 				C15955112921744600F76A1A /* CharacterCell.swift in Sources */,
 				C174B23B29F2F52A00176AD4 /* RickAndMortyDataSource.swift in Sources */,
 				C15BA610291AAD8700E0CF95 /* ListBuilder.swift in Sources */,
+				C174B97B29F90EBC00176AD4 /* MarvelCharacter.swift in Sources */,
 				C1D3C32E2917B25A000C522C /* CharacterDTO.swift in Sources */,
+				C174B97929F90E7D00176AD4 /* MarvelUseCase.swift in Sources */,
+				C174B98429F9626200176AD4 /* CharacterUseCaseProtocol.swift in Sources */,
 				C15BA60F291AAD8700E0CF95 /* ListRouter.swift in Sources */,
 				C1D3C3382917B340000C522C /* HomeViewController.swift in Sources */,
 				C1D3C33D2917B69C000C522C /* BaseViewController.swift in Sources */,
@@ -488,6 +562,8 @@
 				C174B32C29F6C70200176AD4 /* RickAndMortyCharacter.swift in Sources */,
 				C174B33629F7D7A200176AD4 /* DisneyCharacterUseCase.swift in Sources */,
 				C15BA611291AAD8700E0CF95 /* ListProtocols.swift in Sources */,
+				C174B97F29F9107C00176AD4 /* MarvelCell.swift in Sources */,
+				C174B97729F908D100176AD4 /* MarvelCharacterDTO.swift in Sources */,
 				C174B24729F32A6F00176AD4 /* CacheManager.swift in Sources */,
 				C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */,
 				C174B33429F7D64200176AD4 /* DisneyDataSource.swift in Sources */,
