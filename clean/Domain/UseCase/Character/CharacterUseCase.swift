@@ -16,18 +16,11 @@ final class CharacterUseCase {
     }
 }
 
-protocol CharacterUseCaseProtocol {
-    func getCharactersAndNextPage(for page: Int) async throws -> ([CharacterProtocol],
-                                                                  Bool)
-    func getCharactersAndNextPageWhenSearching(this name: String, for page: Int) async throws -> ([CharacterProtocol],
-                                                                                                  Bool)
-}
-
 extension CharacterUseCase: CharacterUseCaseProtocol {
     func getCharactersAndNextPage(for page: Int) async throws -> ([CharacterProtocol],
                                                                   Bool) {
         let list = try await repository.getPagination(for: page)
-        let hasNextPage = list.info.next != nil
+        let hasNextPage = list.info?.next != nil
         return (convertToEntity(these: list.results), hasNextPage)
     }
 
@@ -35,7 +28,7 @@ extension CharacterUseCase: CharacterUseCaseProtocol {
                                                for page: Int) async throws -> ([CharacterProtocol],
                                                                                                   Bool) {
         let list = try await repository.getPaginationWhenSearching(this: name, for: page)
-        let hasNextPage = list.info.next != nil
+        let hasNextPage = list.info?.next != nil
         return (convertToEntity(these: list.results), hasNextPage)
     }
 

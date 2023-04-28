@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 final actor RickAndMortyCharacterUseCase {
     let repository: CharacterRepositoryProtocol
 
@@ -20,14 +18,14 @@ final actor RickAndMortyCharacterUseCase {
 extension RickAndMortyCharacterUseCase: CharacterUseCaseProtocol {
     func getCharactersAndNextPage(for page: Int) async throws -> ([CharacterProtocol], Bool) {
         let list = try await repository.getPagination(for: page)
-        let hasNextPage = list.info.next != nil
+        let hasNextPage = list.info?.next != nil
         return (convertToEntity(these: list.results), hasNextPage)
     }
 
     func getCharactersAndNextPageWhenSearching(this name: String,
                                                for page: Int) async throws -> ([CharacterProtocol], Bool) {
         let list = try await repository.getPaginationWhenSearching(this: name, for: page)
-        let hasNextPage = list.info.next != nil
+        let hasNextPage = list.info?.next != nil
         return (convertToEntity(these: list.results), hasNextPage)
     }
 
