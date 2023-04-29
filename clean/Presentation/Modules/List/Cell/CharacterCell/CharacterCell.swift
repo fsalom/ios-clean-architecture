@@ -24,6 +24,9 @@ class CharacterCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    override func prepareForReuse() {
+        characterImage.image = nil
+    }
     // MARK: - Functions
     func setupUI() {
         characterName.text = character.name
@@ -34,7 +37,7 @@ class CharacterCell: UITableViewCell {
         characterImage.clipsToBounds = true
         characterImage.backgroundColor = .gray
 
-        if let url = URL(string: character.image) {
+        if let urlString = character.image, let url = URL(string: urlString) {
             characterImage.load(url: url)
         }
     }
