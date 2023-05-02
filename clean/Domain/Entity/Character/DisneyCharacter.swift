@@ -19,7 +19,7 @@ class DisneyCharacter: CharacterProtocol, DisneyCharacterProtocol {
         self.name = dto.name
         self.image = dto.imageUrl
 
-        // MARK: RickAndMorty protocol
+        // MARK: Disney protocol
         self.imageUrl = dto.imageUrl
     }
 }
