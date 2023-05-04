@@ -8,7 +8,16 @@ Clean architecture no es un concepto nuevo como podemos ver en https://blog.clea
 
 ![imagen clean architecture](README/CleanArchitecture.jpeg)
 
-Básicamente tenemos que tener claro un concepto y es Dependencia tenemos que aislar las dependencias de nuestro código entre capas para aislar y crear solo una dirección de dependencias que va de la capa más externa a la más interna.
+Clean Architecture es un enfoque de diseño de software que busca separar la lógica de negocio de los detalles de la implementación técnica. Su objetivo es crear una arquitectura sólida y mantenible que permita una fácil evolución y extensión del sistema con el tiempo.
+
+La arquitectura limpia se basa en la idea de dividir el código en capas independientes de la implementación técnica, lo que permite una mayor independencia de la administración de la infraestructura y los detalles de implementación. Esto mejora la legibilidad del código y facilita la identificación de las partes de la aplicación que deben modificarse para efectuar cambios.
+
+La arquitectura limpia se compone de cuatro capas: 
+- La capa de la interfaz de usuario, que interactúa con el usuario final.
+- La capa de aplicación, que se encarga de la lógica de negocio de la aplicación.
+- La capa de dominio, que contiene las reglas de negocio y los modelos.
+- La capa de infraestructura, que se encarga de la conexión de la aplicación con su entorno técnico.
+
 
 ## Estructura del proyecto 
 
@@ -33,6 +42,7 @@ Cada uno estos componentes tiene una función y no deben mezclarse entre ellos. 
 ```
 ├── Core
 ├── Data
+|   ├── DataSource
 |   ├── DTO
 │   └── Repository
 ├── Di
@@ -47,6 +57,7 @@ Cada uno estos componentes tiene una función y no deben mezclarse entre ellos. 
 - **Core**: esta capa se encarga de almacenar todos aquellos componentes que sean comunes a todas las capas. Por ejemplo: Constantes, datos de configuración etc.
 
 - **Data**: esta capa es la que contendrá todos los componentes que se encarguen de obtener y almacenar información.
+    - **DataSource**: Es el mecanismo por el cual obtenemos el dato de una fuente concreta.
     - **DTO**: almacenaremos todos los Data Transfer Object (DTO).
     - **Repository**: contiene todas implementaciones para obtener datos ya sea de una API o de una base de datos.
     
