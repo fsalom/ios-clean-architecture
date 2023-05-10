@@ -101,6 +101,7 @@
 		C1780328291673DA00E9E0AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C178032A291673DA00E9E0AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C18C4E94291EE5A6005D2850 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C1CBB3022A043C7C00CEEFA2 /* README_EN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_EN.md; sourceTree = "<group>"; };
 		C1D3C32D2917B25A000C522C /* CharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDTO.swift; sourceTree = "<group>"; };
 		C1D3C3322917B285000C522C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		C1D3C3372917B340000C522C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				C18C4E94291EE5A6005D2850 /* README.md */,
+				C1CBB3022A043C7C00CEEFA2 /* README_EN.md */,
 				C178031B291673D800E9E0AE /* clean */,
 				C178031A291673D800E9E0AE /* Products */,
 			);

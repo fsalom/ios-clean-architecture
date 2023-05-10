@@ -43,13 +43,16 @@ struct CharacterDTO: Codable,
 }
 
 struct PaginationDTO: Codable, MarvelPaginationProtocol {
+    // MARK: Marvel pagination
     var offset: Int?
     var limit: Int?
     var total: Int?
     var count: Int?
+    var data: [CharacterDTO]?
+
+    // MARK: generic character
     var info: InfoDTO?
     var results: [CharacterDTO]?
-    var data: [CharacterDTO]?
 }
 
 
