@@ -11,21 +11,10 @@ final class ListViewController: BaseViewController {
     var viewModel: ListViewModelProtocol!
 
     // MARK: - IBOutlets
-    @IBOutlet weak var sourceSegmented: UISegmentedControl! {
-        didSet {
-            sourceSegmented.removeAllSegments()
-            for index in 0...viewModel.dataSources.count - 1  {
-                sourceSegmented.insertSegment(withTitle: viewModel.dataSources[index], at: index, animated: true)
-            }
-        }
-    }
     lazy var searchBar: UISearchBar = UISearchBar()
     @IBOutlet weak var tableView: UITableView!
 
     // MARK: - IBActions
-    @IBAction func sourceSegmentedValueChanged(_ sender: UISegmentedControl) {
-        viewModel.sourceChanged(to: sender.selectedSegmentIndex)
-    }
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -79,23 +68,8 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         self.viewModel.loadMoreCharacter(currentItem: indexPath.row)
-        let character = self.viewModel.characters[indexPath.row]
-        if character is (CharacterProtocol & RickAndMortyCharacterProtocol) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "RickAndMortyCharacterCell", for: indexPath) as! RickAndMortyCharacterCell
-            cell.character = character as? (CharacterProtocol & RickAndMortyCharacterProtocol)
-            return cell
-        }
-        if character is (CharacterProtocol & DisneyCharacterProtocol) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DisneyCell", for: indexPath) as! DisneyCell
-            cell.character = character as? (CharacterProtocol & DisneyCharacterProtocol)
-            return cell
-        }
-        if character is (CharacterProtocol & MarvelCharacterProtocol) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MarvelCell", for: indexPath) as! MarvelCell
-            cell.character = character as? (CharacterProtocol & MarvelCharacterProtocol)
-            return cell
-        }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell", for: indexPath) as! CharacterCell
+        let character = self.viewModel.characters[indexPath.row]        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RickAndMortyCharacterCell", for: indexPath) as! RickAndMortyCharacterCell
         cell.character = character
         return cell
     }

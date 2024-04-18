@@ -7,15 +7,7 @@
 
 final class ListViewModel: ListViewModelProtocol {
     let router: ListRouterProtocol
-    var characterUseCase: CharacterUseCaseProtocol {
-        didSet {
-            characters.removeAll()
-            hasNextPage = true
-            page = 1
-            CacheManager().clear()
-            loadCharacters()
-        }
-    }
+    var characterUseCase: CharacterUseCaseProtocol
 
     enum Status {
         case searching
@@ -32,10 +24,7 @@ final class ListViewModel: ListViewModelProtocol {
         }
     }
     var currentStatus: Status = .listing
-    var dataSources: [String] {
-        return sources.compactMap({$0.name})
-    }
-    var characters = [CharacterProtocol]() {
+    var characters = [Character]() {
         didSet {
             listCharactersUpdated?()
         }
@@ -49,14 +38,12 @@ final class ListViewModel: ListViewModelProtocol {
     }
     var page: Int = 1
 
-    var sources: [Source]
     var listCharactersUpdated: (() -> Void)?
     var errorHasOcurred: ((Error) -> Void)?
 
-    init(router: ListRouterProtocol, sources: [Source]) {
+    init(router: ListRouterProtocol, useCase: CharacterUseCaseProtocol) {
         self.router = router
-        self.sources = sources
-        self.characterUseCase = sources.first!.characterUseCase
+        self.characterUseCase = useCase
     }
 }
 
@@ -76,10 +63,6 @@ extension ListViewModel {
                 loadCharacters()
             }
         }
-    }
-
-    func sourceChanged(to: Int) {
-        characterUseCase = sources[to].characterUseCase
     }
 
     func loadCharacters() {

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C15955112921744600F76A1A /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159550F2921744600F76A1A /* CharacterCell.swift */; };
-		C15955122921744600F76A1A /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C15955102921744600F76A1A /* CharacterCell.xib */; };
 		C159551729239CBD00F76A1A /* UImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159551629239CBD00F76A1A /* UImageView.swift */; };
 		C15BA602291AAC7300E0CF95 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C15BA601291AAC7300E0CF95 /* HomeViewController.xib */; };
 		C15BA60C291AAD8700E0CF95 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA606291AAD8700E0CF95 /* ListViewModel.swift */; };
@@ -17,38 +15,28 @@
 		C15BA60F291AAD8700E0CF95 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA609291AAD8700E0CF95 /* ListRouter.swift */; };
 		C15BA610291AAD8700E0CF95 /* ListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA60A291AAD8700E0CF95 /* ListBuilder.swift */; };
 		C15BA611291AAD8700E0CF95 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA60B291AAD8700E0CF95 /* ListProtocols.swift */; };
-		C15BA613291AAE4D00E0CF95 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA612291AAE4D00E0CF95 /* CharacterRepository.swift */; };
-		C15BA615291AAE7600E0CF95 /* CharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA614291AAE7600E0CF95 /* CharacterUseCase.swift */; };
-		C174B23B29F2F52A00176AD4 /* RickAndMortyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B23A29F2F52A00176AD4 /* RickAndMortyDataSource.swift */; };
-		C174B23F29F325E600176AD4 /* CharacterDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B23E29F325E600176AD4 /* CharacterDataSourceProtocol.swift */; };
-		C174B24529F326C900176AD4 /* UDCharacterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B24429F326C900176AD4 /* UDCharacterDataSource.swift */; };
-		C174B24729F32A6F00176AD4 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B24629F32A6F00176AD4 /* CacheManager.swift */; };
-		C174B32129F6BAA200176AD4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32029F6BAA200176AD4 /* NetworkManager.swift */; };
-		C174B32429F6BCCC00176AD4 /* CharacterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32329F6BCCC00176AD4 /* CharacterProtocol.swift */; };
 		C174B32829F6C62100176AD4 /* RickAndMortyCharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32629F6C62100176AD4 /* RickAndMortyCharacterCell.swift */; };
 		C174B32929F6C62100176AD4 /* RickAndMortyCharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C174B32729F6C62100176AD4 /* RickAndMortyCharacterCell.xib */; };
-		C174B32C29F6C70200176AD4 /* RickAndMortyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32B29F6C70200176AD4 /* RickAndMortyCharacter.swift */; };
-		C174B32F29F6D09900176AD4 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B32E29F6D09900176AD4 /* Source.swift */; };
-		C174B33229F7D5BA00176AD4 /* RickAndMortyCharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B33129F7D5BA00176AD4 /* RickAndMortyCharacterUseCase.swift */; };
-		C174B33429F7D64200176AD4 /* DisneyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B33329F7D64200176AD4 /* DisneyDataSource.swift */; };
-		C174B33629F7D7A200176AD4 /* DisneyCharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B33529F7D7A200176AD4 /* DisneyCharacterUseCase.swift */; };
-		C174B33829F7D7C600176AD4 /* DisneyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B33729F7D7C600176AD4 /* DisneyCharacter.swift */; };
-		C174B97129F8528200176AD4 /* DisneyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B96F29F8528100176AD4 /* DisneyCell.swift */; };
-		C174B97229F8528200176AD4 /* DisneyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C174B97029F8528200176AD4 /* DisneyCell.xib */; };
-		C174B97429F85AF400176AD4 /* MarvelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B97329F85AF400176AD4 /* MarvelDataSource.swift */; };
-		C174B97729F908D100176AD4 /* MarvelCharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B97629F908D100176AD4 /* MarvelCharacterDTO.swift */; };
-		C174B97929F90E7D00176AD4 /* MarvelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B97829F90E7D00176AD4 /* MarvelUseCase.swift */; };
-		C174B97B29F90EBC00176AD4 /* MarvelCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B97A29F90EBC00176AD4 /* MarvelCharacter.swift */; };
-		C174B97F29F9107C00176AD4 /* MarvelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B97D29F9107C00176AD4 /* MarvelCell.swift */; };
-		C174B98029F9107C00176AD4 /* MarvelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C174B97E29F9107C00176AD4 /* MarvelCell.xib */; };
-		C174B98429F9626200176AD4 /* CharacterUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C174B98329F9626200176AD4 /* CharacterUseCaseProtocol.swift */; };
 		C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178031C291673D800E9E0AE /* AppDelegate.swift */; };
 		C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178031E291673D800E9E0AE /* SceneDelegate.swift */; };
 		C1780326291673DA00E9E0AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1780325291673DA00E9E0AE /* Assets.xcassets */; };
 		C1780329291673DA00E9E0AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1780327291673DA00E9E0AE /* LaunchScreen.storyboard */; };
 		C18C4E95291EE5A6005D2850 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C18C4E94291EE5A6005D2850 /* README.md */; };
-		C1D3C32E2917B25A000C522C /* CharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C32D2917B25A000C522C /* CharacterDTO.swift */; };
-		C1D3C3332917B285000C522C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C3322917B285000C522C /* Character.swift */; };
+		C1B3A23D2BD1494E00961445 /* CharacterUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A2242BD1494E00961445 /* CharacterUseCaseProtocol.swift */; };
+		C1B3A23E2BD1494E00961445 /* CharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A2252BD1494E00961445 /* CharacterUseCase.swift */; };
+		C1B3A23F2BD1494E00961445 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A2272BD1494E00961445 /* Character.swift */; };
+		C1B3A2402BD1494E00961445 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A2282BD1494E00961445 /* Pagination.swift */; };
+		C1B3A2432BD1494E00961445 /* RMCharacterDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A2312BD1494E00961445 /* RMCharacterDataSourceProtocol.swift */; };
+		C1B3A2442BD1494E00961445 /* RMCharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A2342BD1494E00961445 /* RMCharacterDTO.swift */; };
+		C1B3A2452BD1494E00961445 /* PaginationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A2352BD1494E00961445 /* PaginationDTO.swift */; };
+		C1B3A2462BD1494E00961445 /* RMRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A2362BD1494E00961445 /* RMRemoteDataSource.swift */; };
+		C1B3A2472BD1494E00961445 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A2392BD1494E00961445 /* CharacterRepository.swift */; };
+		C1B3A2482BD1494E00961445 /* CharacterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A23B2BD1494E00961445 /* CharacterMapper.swift */; };
+		C1B3A2492BD1494E00961445 /* CharacterRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A23C2BD1494E00961445 /* CharacterRepositoryProtocol.swift */; };
+		C1B3A2572BD1499300961445 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A24D2BD1499300961445 /* NetworkManager.swift */; };
+		C1B3A2582BD1499300961445 /* RemoteManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A24E2BD1499300961445 /* RemoteManagerProtocol.swift */; };
+		C1B3A2592BD1499300961445 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A2512BD1499300961445 /* UserDefaultsManager.swift */; };
+		C1B3A25A2BD1499300961445 /* LocalManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B3A2522BD1499300961445 /* LocalManagerProtocol.swift */; };
 		C1D3C3382917B340000C522C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C3372917B340000C522C /* HomeViewController.swift */; };
 		C1D3C33D2917B69C000C522C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C33C2917B69C000C522C /* BaseViewController.swift */; };
 		C1D3C33F2917B6EA000C522C /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3C33E2917B6EA000C522C /* HomeBuilder.swift */; };
@@ -59,8 +47,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C159550F2921744600F76A1A /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
-		C15955102921744600F76A1A /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
 		C159551629239CBD00F76A1A /* UImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UImageView.swift; sourceTree = "<group>"; };
 		C15BA601291AAC7300E0CF95 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		C15BA606291AAD8700E0CF95 /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
@@ -69,31 +55,8 @@
 		C15BA609291AAD8700E0CF95 /* ListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		C15BA60A291AAD8700E0CF95 /* ListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBuilder.swift; sourceTree = "<group>"; };
 		C15BA60B291AAD8700E0CF95 /* ListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
-		C15BA612291AAE4D00E0CF95 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
-		C15BA614291AAE7600E0CF95 /* CharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUseCase.swift; sourceTree = "<group>"; };
-		C174B23A29F2F52A00176AD4 /* RickAndMortyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyDataSource.swift; sourceTree = "<group>"; };
-		C174B23E29F325E600176AD4 /* CharacterDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataSourceProtocol.swift; sourceTree = "<group>"; };
-		C174B24429F326C900176AD4 /* UDCharacterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDCharacterDataSource.swift; sourceTree = "<group>"; };
-		C174B24629F32A6F00176AD4 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
-		C174B32029F6BAA200176AD4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		C174B32329F6BCCC00176AD4 /* CharacterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterProtocol.swift; sourceTree = "<group>"; };
 		C174B32629F6C62100176AD4 /* RickAndMortyCharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyCharacterCell.swift; sourceTree = "<group>"; };
 		C174B32729F6C62100176AD4 /* RickAndMortyCharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RickAndMortyCharacterCell.xib; sourceTree = "<group>"; };
-		C174B32B29F6C70200176AD4 /* RickAndMortyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyCharacter.swift; sourceTree = "<group>"; };
-		C174B32E29F6D09900176AD4 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
-		C174B33129F7D5BA00176AD4 /* RickAndMortyCharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyCharacterUseCase.swift; sourceTree = "<group>"; };
-		C174B33329F7D64200176AD4 /* DisneyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyDataSource.swift; sourceTree = "<group>"; };
-		C174B33529F7D7A200176AD4 /* DisneyCharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacterUseCase.swift; sourceTree = "<group>"; };
-		C174B33729F7D7C600176AD4 /* DisneyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCharacter.swift; sourceTree = "<group>"; };
-		C174B96F29F8528100176AD4 /* DisneyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyCell.swift; sourceTree = "<group>"; };
-		C174B97029F8528200176AD4 /* DisneyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisneyCell.xib; sourceTree = "<group>"; };
-		C174B97329F85AF400176AD4 /* MarvelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDataSource.swift; sourceTree = "<group>"; };
-		C174B97629F908D100176AD4 /* MarvelCharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacterDTO.swift; sourceTree = "<group>"; };
-		C174B97829F90E7D00176AD4 /* MarvelUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelUseCase.swift; sourceTree = "<group>"; };
-		C174B97A29F90EBC00176AD4 /* MarvelCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacter.swift; sourceTree = "<group>"; };
-		C174B97D29F9107C00176AD4 /* MarvelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCell.swift; sourceTree = "<group>"; };
-		C174B97E29F9107C00176AD4 /* MarvelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarvelCell.xib; sourceTree = "<group>"; };
-		C174B98329F9626200176AD4 /* CharacterUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUseCaseProtocol.swift; sourceTree = "<group>"; };
 		C1780319291673D800E9E0AE /* clean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C178031C291673D800E9E0AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C178031E291673D800E9E0AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,9 +64,22 @@
 		C1780328291673DA00E9E0AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C178032A291673DA00E9E0AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C18C4E94291EE5A6005D2850 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C1B3A2242BD1494E00961445 /* CharacterUseCaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterUseCaseProtocol.swift; sourceTree = "<group>"; };
+		C1B3A2252BD1494E00961445 /* CharacterUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterUseCase.swift; sourceTree = "<group>"; };
+		C1B3A2272BD1494E00961445 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		C1B3A2282BD1494E00961445 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		C1B3A2312BD1494E00961445 /* RMCharacterDataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCharacterDataSourceProtocol.swift; sourceTree = "<group>"; };
+		C1B3A2342BD1494E00961445 /* RMCharacterDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMCharacterDTO.swift; sourceTree = "<group>"; };
+		C1B3A2352BD1494E00961445 /* PaginationDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationDTO.swift; sourceTree = "<group>"; };
+		C1B3A2362BD1494E00961445 /* RMRemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMRemoteDataSource.swift; sourceTree = "<group>"; };
+		C1B3A2392BD1494E00961445 /* CharacterRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
+		C1B3A23B2BD1494E00961445 /* CharacterMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterMapper.swift; sourceTree = "<group>"; };
+		C1B3A23C2BD1494E00961445 /* CharacterRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryProtocol.swift; sourceTree = "<group>"; };
+		C1B3A24D2BD1499300961445 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C1B3A24E2BD1499300961445 /* RemoteManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteManagerProtocol.swift; sourceTree = "<group>"; };
+		C1B3A2512BD1499300961445 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		C1B3A2522BD1499300961445 /* LocalManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalManagerProtocol.swift; sourceTree = "<group>"; };
 		C1CBB3022A043C7C00CEEFA2 /* README_EN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_EN.md; sourceTree = "<group>"; };
-		C1D3C32D2917B25A000C522C /* CharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDTO.swift; sourceTree = "<group>"; };
-		C1D3C3322917B285000C522C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		C1D3C3372917B340000C522C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C1D3C33C2917B69C000C522C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C1D3C33E2917B6EA000C522C /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
@@ -147,64 +123,6 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		C174B23929F2F50F00176AD4 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				C174B23C29F325C300176AD4 /* Character */,
-			);
-			path = DataSource;
-			sourceTree = "<group>";
-		};
-		C174B23C29F325C300176AD4 /* Character */ = {
-			isa = PBXGroup;
-			children = (
-				C1D3C329291674C5000C522C /* DTO */,
-				C174B23E29F325E600176AD4 /* CharacterDataSourceProtocol.swift */,
-				C174B24229F3262500176AD4 /* API */,
-				C174B24329F326A400176AD4 /* UserDefaults */,
-			);
-			path = Character;
-			sourceTree = "<group>";
-		};
-		C174B24229F3262500176AD4 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				C174B23A29F2F52A00176AD4 /* RickAndMortyDataSource.swift */,
-				C174B33329F7D64200176AD4 /* DisneyDataSource.swift */,
-				C174B97329F85AF400176AD4 /* MarvelDataSource.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		C174B24329F326A400176AD4 /* UserDefaults */ = {
-			isa = PBXGroup;
-			children = (
-				C174B24429F326C900176AD4 /* UDCharacterDataSource.swift */,
-			);
-			path = UserDefaults;
-			sourceTree = "<group>";
-		};
-		C174B31F29F6B6E100176AD4 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				C174B24629F32A6F00176AD4 /* CacheManager.swift */,
-				C174B32029F6BAA200176AD4 /* NetworkManager.swift */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		C174B32229F6BCC000176AD4 /* Character */ = {
-			isa = PBXGroup;
-			children = (
-				C174B32329F6BCCC00176AD4 /* CharacterProtocol.swift */,
-				C1D3C3322917B285000C522C /* Character.swift */,
-				C174B33729F7D7C600176AD4 /* DisneyCharacter.swift */,
-				C174B32B29F6C70200176AD4 /* RickAndMortyCharacter.swift */,
-				C174B97A29F90EBC00176AD4 /* MarvelCharacter.swift */,
-			);
-			path = Character;
-			sourceTree = "<group>";
-		};
 		C174B32529F6C57900176AD4 /* RickAndMortyCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,44 +130,6 @@
 				C174B32729F6C62100176AD4 /* RickAndMortyCharacterCell.xib */,
 			);
 			path = RickAndMortyCell;
-			sourceTree = "<group>";
-		};
-		C174B32D29F6D08C00176AD4 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				C174B32E29F6D09900176AD4 /* Source.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		C174B33029F7D59A00176AD4 /* Character */ = {
-			isa = PBXGroup;
-			children = (
-				C174B98329F9626200176AD4 /* CharacterUseCaseProtocol.swift */,
-				C15BA614291AAE7600E0CF95 /* CharacterUseCase.swift */,
-				C174B33129F7D5BA00176AD4 /* RickAndMortyCharacterUseCase.swift */,
-				C174B33529F7D7A200176AD4 /* DisneyCharacterUseCase.swift */,
-				C174B97829F90E7D00176AD4 /* MarvelUseCase.swift */,
-			);
-			path = Character;
-			sourceTree = "<group>";
-		};
-		C174B96E29F8526C00176AD4 /* DisneyCell */ = {
-			isa = PBXGroup;
-			children = (
-				C174B96F29F8528100176AD4 /* DisneyCell.swift */,
-				C174B97029F8528200176AD4 /* DisneyCell.xib */,
-			);
-			path = DisneyCell;
-			sourceTree = "<group>";
-		};
-		C174B97C29F9106900176AD4 /* MarvelCell */ = {
-			isa = PBXGroup;
-			children = (
-				C174B97D29F9107C00176AD4 /* MarvelCell.swift */,
-				C174B97E29F9107C00176AD4 /* MarvelCell.xib */,
-			);
-			path = MarvelCell;
 			sourceTree = "<group>";
 		};
 		C1780310291673D800E9E0AE = {
@@ -273,11 +153,11 @@
 		C178031B291673D800E9E0AE /* clean */ = {
 			isa = PBXGroup;
 			children = (
-				C174B31F29F6B6E100176AD4 /* Manager */,
+				C1B3A24A2BD1499300961445 /* Manager */,
+				C1B3A2292BD1494E00961445 /* Data */,
+				C1B3A2212BD1494E00961445 /* Domain */,
 				C159551529239CAA00F76A1A /* Helper */,
 				C1D3C34D2919017E000C522C /* DI */,
-				C1D3C32629167417000C522C /* Data */,
-				C1D3C3272916741D000C522C /* Domain */,
 				C1D3C32429167401000C522C /* Presentation */,
 				C1E97E9D292569970086F3A8 /* Resources */,
 			);
@@ -287,21 +167,173 @@
 		C18C4E96292011CF005D2850 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				C174B97C29F9106900176AD4 /* MarvelCell */,
-				C174B96E29F8526C00176AD4 /* DisneyCell */,
 				C174B32529F6C57900176AD4 /* RickAndMortyCell */,
-				C19B651E291D4BCD00D1D112 /* CharacterCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		C19B651E291D4BCD00D1D112 /* CharacterCell */ = {
+		C1B3A2212BD1494E00961445 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				C159550F2921744600F76A1A /* CharacterCell.swift */,
-				C15955102921744600F76A1A /* CharacterCell.xib */,
+				C1B3A25D2BD149BD00961445 /* Repositories */,
+				C1B3A2222BD1494E00961445 /* UseCases */,
+				C1B3A2262BD1494E00961445 /* Entities */,
 			);
-			path = CharacterCell;
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C1B3A2222BD1494E00961445 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A2232BD1494E00961445 /* Character */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		C1B3A2232BD1494E00961445 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A2242BD1494E00961445 /* CharacterUseCaseProtocol.swift */,
+				C1B3A2252BD1494E00961445 /* CharacterUseCase.swift */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		C1B3A2262BD1494E00961445 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A2272BD1494E00961445 /* Character.swift */,
+				C1B3A2282BD1494E00961445 /* Pagination.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C1B3A2292BD1494E00961445 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A22A2BD1494E00961445 /* DataSource */,
+				C1B3A2372BD1494E00961445 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C1B3A22A2BD1494E00961445 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A22B2BD1494E00961445 /* Character */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		C1B3A22B2BD1494E00961445 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A2302BD1494E00961445 /* Remote */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		C1B3A2302BD1494E00961445 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A2312BD1494E00961445 /* RMCharacterDataSourceProtocol.swift */,
+				C1B3A2322BD1494E00961445 /* RickAndMorty */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		C1B3A2322BD1494E00961445 /* RickAndMorty */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A2332BD1494E00961445 /* DTOs */,
+				C1B3A2362BD1494E00961445 /* RMRemoteDataSource.swift */,
+			);
+			path = RickAndMorty;
+			sourceTree = "<group>";
+		};
+		C1B3A2332BD1494E00961445 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A2342BD1494E00961445 /* RMCharacterDTO.swift */,
+				C1B3A2352BD1494E00961445 /* PaginationDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		C1B3A2372BD1494E00961445 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A2382BD1494E00961445 /* Character */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		C1B3A2382BD1494E00961445 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A2392BD1494E00961445 /* CharacterRepository.swift */,
+				C1B3A23A2BD1494E00961445 /* Mapper */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		C1B3A23A2BD1494E00961445 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A23B2BD1494E00961445 /* CharacterMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		C1B3A24A2BD1499300961445 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A24B2BD1499300961445 /* NetworkManager */,
+				C1B3A24F2BD1499300961445 /* LocalManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		C1B3A24B2BD1499300961445 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A24C2BD1499300961445 /* URLSession */,
+				C1B3A24E2BD1499300961445 /* RemoteManagerProtocol.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		C1B3A24C2BD1499300961445 /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A24D2BD1499300961445 /* NetworkManager.swift */,
+			);
+			path = URLSession;
+			sourceTree = "<group>";
+		};
+		C1B3A24F2BD1499300961445 /* LocalManager */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A2502BD1499300961445 /* UserDefaults */,
+				C1B3A2522BD1499300961445 /* LocalManagerProtocol.swift */,
+			);
+			path = LocalManager;
+			sourceTree = "<group>";
+		};
+		C1B3A2502BD1499300961445 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A2512BD1499300961445 /* UserDefaultsManager.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		C1B3A25D2BD149BD00961445 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				C1B3A23C2BD1494E00961445 /* CharacterRepositoryProtocol.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		C1D3C32429167401000C522C /* Presentation */ = {
@@ -320,58 +352,6 @@
 				C178031E291673D800E9E0AE /* SceneDelegate.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		C1D3C32629167417000C522C /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				C174B23929F2F50F00176AD4 /* DataSource */,
-				C1D3C32829167446000C522C /* Repository */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		C1D3C3272916741D000C522C /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				C1D3C32B2917B21A000C522C /* UseCase */,
-				C1D3C32A2917B1B5000C522C /* Entity */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		C1D3C32829167446000C522C /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				C15BA612291AAE4D00E0CF95 /* CharacterRepository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		C1D3C329291674C5000C522C /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-				C1D3C32D2917B25A000C522C /* CharacterDTO.swift */,
-				C174B97629F908D100176AD4 /* MarvelCharacterDTO.swift */,
-			);
-			path = DTO;
-			sourceTree = "<group>";
-		};
-		C1D3C32A2917B1B5000C522C /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				C174B32D29F6D08C00176AD4 /* Source */,
-				C174B32229F6BCC000176AD4 /* Character */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		C1D3C32B2917B21A000C522C /* UseCase */ = {
-			isa = PBXGroup;
-			children = (
-				C174B33029F7D59A00176AD4 /* Character */,
-			);
-			path = UseCase;
 			sourceTree = "<group>";
 		};
 		C1D3C32C2917B229000C522C /* Modules */ = {
@@ -473,10 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C18C4E95291EE5A6005D2850 /* README.md in Resources */,
-				C15955122921744600F76A1A /* CharacterCell.xib in Resources */,
 				C1780329291673DA00E9E0AE /* LaunchScreen.storyboard in Resources */,
-				C174B98029F9107C00176AD4 /* MarvelCell.xib in Resources */,
-				C174B97229F8528200176AD4 /* DisneyCell.xib in Resources */,
 				C1780326291673DA00E9E0AE /* Assets.xcassets in Resources */,
 				C15BA602291AAC7300E0CF95 /* HomeViewController.xib in Resources */,
 				C15BA60D291AAD8700E0CF95 /* ListViewController.xib in Resources */,
@@ -492,45 +469,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				C174B32829F6C62100176AD4 /* RickAndMortyCharacterCell.swift in Sources */,
-				C174B23F29F325E600176AD4 /* CharacterDataSourceProtocol.swift in Sources */,
-				C174B32429F6BCCC00176AD4 /* CharacterProtocol.swift in Sources */,
-				C174B97129F8528200176AD4 /* DisneyCell.swift in Sources */,
+				C1B3A25A2BD1499300961445 /* LocalManagerProtocol.swift in Sources */,
+				C1B3A2472BD1494E00961445 /* CharacterRepository.swift in Sources */,
 				C1D3C33F2917B6EA000C522C /* HomeBuilder.swift in Sources */,
 				C15BA60E291AAD8700E0CF95 /* ListViewController.swift in Sources */,
+				C1B3A2492BD1494E00961445 /* CharacterRepositoryProtocol.swift in Sources */,
+				C1B3A2462BD1494E00961445 /* RMRemoteDataSource.swift in Sources */,
 				C15BA60C291AAD8700E0CF95 /* ListViewModel.swift in Sources */,
-				C174B33229F7D5BA00176AD4 /* RickAndMortyCharacterUseCase.swift in Sources */,
 				C1D3C3412917B720000C522C /* HomeProtocols.swift in Sources */,
 				C159551729239CBD00F76A1A /* UImageView.swift in Sources */,
-				C174B97429F85AF400176AD4 /* MarvelDataSource.swift in Sources */,
-				C15955112921744600F76A1A /* CharacterCell.swift in Sources */,
-				C174B23B29F2F52A00176AD4 /* RickAndMortyDataSource.swift in Sources */,
+				C1B3A2442BD1494E00961445 /* RMCharacterDTO.swift in Sources */,
 				C15BA610291AAD8700E0CF95 /* ListBuilder.swift in Sources */,
-				C174B97B29F90EBC00176AD4 /* MarvelCharacter.swift in Sources */,
-				C1D3C32E2917B25A000C522C /* CharacterDTO.swift in Sources */,
-				C174B97929F90E7D00176AD4 /* MarvelUseCase.swift in Sources */,
-				C174B98429F9626200176AD4 /* CharacterUseCaseProtocol.swift in Sources */,
 				C15BA60F291AAD8700E0CF95 /* ListRouter.swift in Sources */,
 				C1D3C3382917B340000C522C /* HomeViewController.swift in Sources */,
+				C1B3A2582BD1499300961445 /* RemoteManagerProtocol.swift in Sources */,
+				C1B3A23D2BD1494E00961445 /* CharacterUseCaseProtocol.swift in Sources */,
+				C1B3A2402BD1494E00961445 /* Pagination.swift in Sources */,
 				C1D3C33D2917B69C000C522C /* BaseViewController.swift in Sources */,
-				C15BA615291AAE7600E0CF95 /* CharacterUseCase.swift in Sources */,
-				C174B32F29F6D09900176AD4 /* Source.swift in Sources */,
-				C174B33829F7D7C600176AD4 /* DisneyCharacter.swift in Sources */,
-				C174B24529F326C900176AD4 /* UDCharacterDataSource.swift in Sources */,
-				C174B32129F6BAA200176AD4 /* NetworkManager.swift in Sources */,
+				C1B3A2572BD1499300961445 /* NetworkManager.swift in Sources */,
+				C1B3A23E2BD1494E00961445 /* CharacterUseCase.swift in Sources */,
+				C1B3A2482BD1494E00961445 /* CharacterMapper.swift in Sources */,
+				C1B3A23F2BD1494E00961445 /* Character.swift in Sources */,
+				C1B3A2432BD1494E00961445 /* RMCharacterDataSourceProtocol.swift in Sources */,
 				C1D3C34F2919018C000C522C /* Container.swift in Sources */,
 				C1D3C3452917B816000C522C /* HomeViewModel.swift in Sources */,
+				C1B3A2592BD1499300961445 /* UserDefaultsManager.swift in Sources */,
 				C1D3C3492917B952000C522C /* HomeRouter.swift in Sources */,
-				C1D3C3332917B285000C522C /* Character.swift in Sources */,
-				C174B32C29F6C70200176AD4 /* RickAndMortyCharacter.swift in Sources */,
-				C174B33629F7D7A200176AD4 /* DisneyCharacterUseCase.swift in Sources */,
 				C15BA611291AAD8700E0CF95 /* ListProtocols.swift in Sources */,
-				C174B97F29F9107C00176AD4 /* MarvelCell.swift in Sources */,
-				C174B97729F908D100176AD4 /* MarvelCharacterDTO.swift in Sources */,
-				C174B24729F32A6F00176AD4 /* CacheManager.swift in Sources */,
 				C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */,
-				C174B33429F7D64200176AD4 /* DisneyDataSource.swift in Sources */,
-				C15BA613291AAE4D00E0CF95 /* CharacterRepository.swift in Sources */,
 				C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */,
+				C1B3A2452BD1494E00961445 /* PaginationDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

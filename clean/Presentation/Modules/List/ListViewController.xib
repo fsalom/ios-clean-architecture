@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="clean" customModuleProvider="target">
             <connections>
-                <outlet property="sourceSegmented" destination="HJj-l1-j1q" id="1wg-f5-3Xj"/>
                 <outlet property="tableView" destination="cFb-Lf-R6F" id="cJf-Cv-Ibd"/>
                 <outlet property="view" destination="iN0-l3-epB" id="n2N-V3-N5H"/>
             </connections>
@@ -22,28 +21,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cFb-Lf-R6F">
-                    <rect key="frame" x="0.0" y="122" width="393" height="730"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HJj-l1-j1q">
-                    <rect key="frame" x="131" y="75" width="131" height="32"/>
-                    <segments>
-                        <segment title="First"/>
-                        <segment title="Second"/>
-                    </segments>
-                    <connections>
-                        <action selector="sourceSegmentedValueChanged:" destination="-1" eventType="valueChanged" id="tyt-lM-EnL"/>
-                    </connections>
-                </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="cFb-Lf-R6F" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4mR-Wa-J9f"/>
-                <constraint firstItem="HJj-l1-j1q" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="DNv-Ca-YSC"/>
-                <constraint firstItem="HJj-l1-j1q" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="bNh-vm-0NT"/>
+                <constraint firstItem="cFb-Lf-R6F" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Xs0-NH-UcN"/>
                 <constraint firstItem="cFb-Lf-R6F" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="hu8-Dx-Xvi"/>
-                <constraint firstItem="cFb-Lf-R6F" firstAttribute="top" secondItem="HJj-l1-j1q" secondAttribute="bottom" constant="16" id="o8k-PS-QPe"/>
                 <constraint firstAttribute="bottom" secondItem="cFb-Lf-R6F" secondAttribute="bottom" id="oNf-Hg-NUU"/>
             </constraints>
             <point key="canvasLocation" x="12.977099236641221" y="41.549295774647888"/>

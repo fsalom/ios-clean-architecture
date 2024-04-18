@@ -14,9 +14,11 @@ class RickAndMortyCharacterCell: UITableViewCell {
     @IBOutlet weak var specieLabel: UILabel!
     @IBOutlet weak var characterImage: UIImageView!
 
-    var character: (CharacterProtocol & RickAndMortyCharacterProtocol)! {
+    var character: Character? {
         didSet {
-            setupUI()
+            if let character {
+                setupUI(this: character)
+            }
         }
     }
     // MARK: - Life Cycle
@@ -30,7 +32,7 @@ class RickAndMortyCharacterCell: UITableViewCell {
         characterImage.image = nil
     }
     // MARK: - Functions
-    func setupUI() {
+    func setupUI(this character: Character) {
         characterImage.image = nil
         characterName.text = character.name
         specieLabel.text = character.species
@@ -39,16 +41,16 @@ class RickAndMortyCharacterCell: UITableViewCell {
         characterImage.clipsToBounds = true
         characterImage.backgroundColor = .white
         statusView.layer.cornerRadius = statusView.frame.width / 2
-        if let urlString = character.image, let url = URL(string: urlString) {
+        if let url = URL(string: character.image) {
             characterImage.load(url: url)
         }
 
         switch character.status {
-        case "Alive":
-            statusView.backgroundColor = .green
-        case "Dead":
+        case .Dead:
             statusView.backgroundColor = .red
-        default:
+        case .Alive:
+            statusView.backgroundColor = .green
+        case .unknown:
             statusView.backgroundColor = .gray
         }
     }
