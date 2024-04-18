@@ -28,7 +28,6 @@ Al igual que la descripción del sistema de capa debe especificar y describir qu
 Esta seria la distribución de carpetas que contendrán nuestro proyecto.
 
 ```
-├── Core
 ├── Data
 ├── DI
 ├── Domain
@@ -40,30 +39,27 @@ Esta seria la distribución de carpetas que contendrán nuestro proyecto.
 Cada uno estos componentes tiene una función y no deben mezclarse entre ellos. Teniendo claro donde debe de ir cada una de las lógicas que implementemos.
 
 ```
-├── Core
 ├── Data
-|   ├── DataSource
-|   ├── DTO
-│   └── Repository
-├── Di
+|   ├── DataSources
+│   └── Repositories
+├── DI
 ├── Domain
-│    ├── UseCase
-│    └── Entity
+│    ├── UseCases
+│    ├── Entities
+│    └── Repositories
 └── Presentation
     ├── App
     └── Modules
 ```
 
-- **Core**: esta capa se encarga de almacenar todos aquellos componentes que sean comunes a todas las capas. Por ejemplo: Constantes, datos de configuración etc.
-
 - **Data**: esta capa es la que contendrá todos los componentes que se encarguen de obtener y almacenar información.
     - **DataSource**: Es el mecanismo por el cual obtenemos el dato de una fuente concreta.
-    - **DTO**: almacenaremos todos los Data Transfer Object (DTO).
     - **Repository**: contiene todas implementaciones para obtener datos ya sea de una API o de una base de datos.
     
 - **DI**: esta capa contiene la inyección de dependencias de nuestro proyecto que se utiliza a lo largo de la app. En nuestro caso contendrá el Container.swift que contine todas las dependencias del proyecto.
 
 - **Domain**: esta capa se encarga de definir entidades y casos de uso por Dominio.
+    - **Repository**: son los protocolos de repository
     - **Entity**: son modelos utilizados más allá de los DTO para gestionar base de datos o core data.
     - **UseCase**: Lista todas las funcionalidades de nuestra aplicación. Ejemplo: Get, Delete, Create , Update.
     
@@ -100,9 +96,11 @@ Cada módulo esta compuesto por una serie de ficheros que deben ser implementado
 
 La imagen describe el proceso de obtención de información y como esta se transmite a lo largo de los modulos. 
 
-El `repository` es el encargado de obtener el dato ya sea de una API, base de datos local o cualquier otra fuente de datos.
+El `datasource` es el encargado de obtener el dato ya sea de una API, base de datos local o cualquier otra fuente de datos.
 
-El `use case` es el responsable de realizar las operaciones necesarias para devolver la información ya tratada al viewModel. 
+El `repository` es el encargado de decidir la lógica para la obtención del dato. Por ejemplo consultando a local, obteniendo de una api o una combinación de estos.
+
+El `use case` es el responsable de realizar las operaciones necesarias para devolver la información que necesita el viewModel. 
 Contiene un conjunto de soluciones a diversas situaciones y cada una de ellas resuelve una y sólo una tarea en particular, resolviendo todas sus dependencias para poder ser ejecutada.
 
 El `viewModel` obtiene la información previamente tratada por el use case y ejecuta las funciones que sean necesarias y notifica al `viewController` para que realice los cambios de UI.

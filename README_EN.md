@@ -1,6 +1,6 @@
-# Complete example of Clean Architecture MVVM
+# Complete Example of Clean Architecture MVVM
 
-There is a lot of talk about clean architecture and maybe, like me, you haven't quite understood the why behind it.
+There's much talk about clean architecture, and perhaps, like me, you've found it difficult to understand the reasons behind it.
 
 ## General explanation
 
@@ -8,22 +8,25 @@ Clean Architecture is not a new concept, as we can see at https://blog.cleancode
 
 ![Clean Architecture image](README/CleanArchitecture.jpeg)
 
-Clean Architecture is a software design approach that aims to separate business logic from technical implementation details. Its goal is to create a solid and maintainable architecture that allows for easy evolution and expansion of the system over time.
+Clean Architecture is a software design approach that aims to separate business logic from technical implementation details. Its goal is to create a robust and maintainable architecture that allows for easy evolution and extension of the system over time.
 
-The clean architecture is based on the idea of dividing code into independent layers of technical implementation, which allows for greater independence from infrastructure management and implementation details. This improves code readability and facilitates the identification of the parts of the application that need to be changed to make changes.
+Clean architecture is based on the idea of dividing the code into independent layers of technical implementation, allowing for greater independence from infrastructure management and implementation details. This improves code readability and makes it easier to identify the parts of the application that need to be changed to make changes.
 
-The clean architecture consists of four layers:
+Clean architecture consists of four layers:
+
 - The user interface layer, which interacts with the end user.
-- The application layer, which is responsible for the application's business logic.
+- The application layer, which handles the business logic of the application.
+- The domain layer, which contains business rules and models.
+- The infrastructure layer, which handles the connection of the application to its technical environment.
+
+## Project Structure
+
+Just as the layer system description should specify and describe what each of these does, we must transfer the same behavior to our project. To do this, we will create a series of folders that will contain the logic of each of these layers.
 
 
-## Estructura del proyecto 
+### Main Folders
 
-Al igual que la descripción del sistema de capa debe especificar y describir que hace cada uno de estas, debemos trasladar a nuestro proyecto el mismo comportamiento. Para ello crearemos una serie de carpetas que contendrán la lógica de cada uno de estas capas.
-
-### Principales carpetas
-
-Esta seria la distribución de carpetas que contendrán nuestro proyecto.
+This would be the distribution of folders that will contain our project.
 
 ```
 ├── Core
@@ -33,9 +36,9 @@ Esta seria la distribución de carpetas que contendrán nuestro proyecto.
 └── Presentation
 ```
 
-## Visión detallada y descripción
+## Detailed Vision and Description
 
-Cada uno estos componentes tiene una función y no deben mezclarse entre ellos. Teniendo claro donde debe de ir cada una de las lógicas que implementemos.
+Each of these components has a function and should not be mixed together. Knowing clearly where each of the logics we implement should go.
 
 ```
 ├── Core
@@ -52,24 +55,23 @@ Cada uno estos componentes tiene una función y no deben mezclarse entre ellos. 
     └── Modules
 ```
 
-- **Core**: esta capa se encarga de almacenar todos aquellos componentes que sean comunes a todas las capas. Por ejemplo: Constantes, datos de configuración etc.
 
-- **Data**: esta capa es la que contendrá todos los componentes que se encarguen de obtener y almacenar información.
-    - **DataSource**: Es el mecanismo por el cual obtenemos el dato de una fuente concreta.
-    - **DTO**: almacenaremos todos los Data Transfer Object (DTO).
-    - **Repository**: contiene todas implementaciones para obtener datos ya sea de una API o de una base de datos.
+- **Data**: This layer is the one that will contain all the components that are responsible for obtaining and storing information.
+    - **DataSource**: It is the mechanism by which we obtain the data from a specific source.
+    - **Repository**: It contains all implementations to obtain data, either from an API or a database.
     
-- **DI**: esta capa contiene la inyección de dependencias de nuestro proyecto que se utiliza a lo largo de la app. En nuestro caso contendrá el Container.swift que contine todas las dependencias del proyecto.
+- **DI**: This layer contains the dependency injection of our project that is used throughout the app. In our case, it will contain the Container.swift file that contains all the dependencies of the project.
 
 - **Domain**: esta capa se encarga de definir entidades y casos de uso por Dominio.
-    - **Entity**: son modelos utilizados más allá de los DTO para gestionar base de datos o core data.
-    - **UseCase**: Lista todas las funcionalidades de nuestra aplicación. Ejemplo: Get, Delete, Create , Update.
+    - **Respositories**: These are the repository protocols.
+    - **Entities**: These are models used beyond DTOs to manage databases or Core Data.
+    - **UseCases**: Lists all the functionalities of our application. Example: Get, Delete, Create, Update.
     
-- **Presentation**: La capa de presentación mantendrá todo lo relacionado con UI y su gestión.
+- **Presentation**: The presentation layer will maintain everything related to UI and its management.
 
-## Capa de presentación - Modules
+## Presentation Layer - Modules
 
-Cada módulo esta compuesto por una serie de ficheros que deben ser implementados en cada uno de ellos.
+Each module is composed of a series of files that must be implemented in each of them.
 
 ```
 └── Presentation
@@ -82,33 +84,33 @@ Cada módulo esta compuesto por una serie de ficheros que deben ser implementado
         └── ToDoViewController(UI)
 ```
 
-- **Builder**: constructor del viewController y sus dependencias
+- **Builder**: Constructor of the viewController and its dependencies.
 
-- **Protocols**: responsable de declarar todos los protocolos que se usarán en la aplicación   
+- **Protocols**: Responsible for declaring all the protocols that will be used in the application.   
 
-- **Router**: responsable de la navegación por parte del controlador
+- **Router**: Responsible for the navigation by the controller.
 
-- **ViewController**: controlador de la UI para gestionar la lógica del módulo
+- **ViewController**: UI controller to manage the module's logic.
 
-- **ViewController(UI)**: capa visual del controlador
+- **ViewController(UI)**: Visual layer of the controller.
 
-## Uso de la arquitectura
+## Using the Architecture
 
 ![imagen arquitectura](README/arquitectura.png)
 
-La imagen describe el proceso de obtención de información y como esta se transmite a lo largo de los modulos. 
+The image describes the process of obtaining information and how it is transmitted throughout the modules.
 
-El `repository` es el encargado de obtener el dato ya sea de una API, base de datos local o cualquier otra fuente de datos.
+The `datasource` is responsible for obtaining the data, whether it be from an API, local database, or any other data source.
 
-El `use case` es el responsable de realizar las operaciones necesarias para devolver la información ya tratada al viewModel. 
-Contiene un conjunto de soluciones a diversas situaciones y cada una de ellas resuelve una y sólo una tarea en particular, resolviendo todas sus dependencias para poder ser ejecutada.
+The `repository` is responsible for deciding the logic for obtaining the data. For example, by querying local, obtaining from an API, or a combination of these.
 
-El `viewModel` obtiene la información previamente tratada por el use case y ejecuta las funciones que sean necesarias y notifica al `viewController` para que realice los cambios de UI.
+The `use case` is responsible for performing the necessary operations to return the information needed by the viewModel. It contains a set of solutions to various situations, and each one of them solves one and only one specific task, resolving all its dependencies to be executed.
 
-El `viewController` es el responsable de ejecutar las acciones relacionadas con el UI
+The `viewModel` obtains the information previously processed by the use case and executes the functions that are necessary, notifying the viewController to perform UI changes.
 
+The `viewController` is responsible for executing actions related to the UI.
 
-## Autor
+## Author
 
 Fernando Salom
 
@@ -116,5 +118,5 @@ https://fernandosalom.es
 
 https://www.linkedin.com/in/fsalom/
 
-## Licencia
+## License
 [MIT](https://choosealicense.com/licenses/mit/)
